@@ -13,19 +13,7 @@ export default function DeleteAccount() {
 
                 <div className="p-1 rounded-xl shadow-lg bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 overflow-hidden">
                     <div className="flex flex-col items-stretch justify-start md:flex-row md:items-start bg-white dark:bg-gray-900">
-                        <div
-                            className="w-full bg-center bg-no-repeat aspect-video bg-cover md:rounded-l-lg md:rounded-tr-none md:w-1/3"
-                            style={{
-                                backgroundImage:
-                                    "linear-gradient(135deg, #ef4444 0%, #3f0bda 100%)",
-                            }}
-                        >
-                            <div className="w-full h-full flex items-center justify-center bg-black/10">
-                                <span className="material-symbols-outlined text-white text-6xl">
-                                    warning
-                                </span>
-                            </div>
-                        </div>
+
                         <div className="flex w-full grow flex-col items-stretch justify-center gap-3 py-6 px-6">
                             <p className="text-[#131118] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">
                                 This action is irreversible
@@ -98,7 +86,7 @@ export default function DeleteAccount() {
                             </label>
                         </div>
                         <div className="flex flex-col sm:flex-row gap-3 pt-4">
-                            <button className="flex-1 flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 border-2 border-danger text-danger text-sm font-bold leading-normal hover:bg-danger/5 transition-colors">
+                            <button className="flex-1 flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-red-600 text-white hover:bg-red-700 text-sm font-bold leading-normal transition-colors">
                                 Delete My Account
                             </button>
                         </div>

@@ -5,9 +5,7 @@ export default function AboutHero() {
                 <div className="text-center">
                     <h1 className="text-5xl md:text-7xl font-black text-[#131118] dark:text-white leading-[1.05] tracking-tight mb-8">
                         Empowering Human <br />
-                        <span className="text-transparent bg-clip-text brand-gradient">
-                            Creativity
-                        </span>{" "}
+                        Creativity
                         through AI
                     </h1>
                     <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
