@@ -9,9 +9,9 @@ export default function Navbar() {
                         <span className="material-symbols-outlined text-primary text-3xl">
                             auto_fix_high
                         </span>
-                        <span className="text-[#131118] dark:text-white text-xl font-bold tracking-tight">
+                        <Link href="/" className="text-[#131118] dark:text-white text-xl font-bold tracking-tight">
                             Ai Utilities
-                        </span>
+                        </Link>
                     </div>
                     <div className="hidden md:flex items-center gap-8">
                         <Link
@@ -44,9 +44,12 @@ export default function Navbar() {
                         >
                             Privacy
                         </Link>
-                        <button className="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 text-sm font-bold px-4 py-2 rounded-lg hover:bg-red-50 hover:text-red-600 transition-colors">
+                        <Link
+                            href="/delete-account"
+                            className="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 text-sm font-bold px-4 py-2 rounded-lg hover:bg-red-50 hover:text-red-600 transition-colors"
+                        >
                             Delete Account
-                        </button>
+                        </Link>
                     </div>
                     {/* Mobile menu button could be added here */}
                 </div>
