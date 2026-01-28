@@ -1,19 +1,32 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function DeleteAccount() {
     return (
         <main className="flex flex-1 justify-center py-12 px-4 shadow-sm">
             <div className="max-w-[640px] w-full flex flex-col gap-6">
-                <div className="flex flex-col gap-2 text-center">
-                    <h1 className="text-[#131118] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="flex flex-col gap-2 text-center"
+                >
+                    <h1 className="text-[#131118] dark:text-white text-4xl mt-8 font-black leading-tight tracking-[-0.033em]">
                         Delete Your Account
                     </h1>
                     <p className="text-[#6b608a] dark:text-gray-400 text-lg font-normal leading-normal">
                         We&apos;re sorry to see you go. This is a permanent action.
                     </p>
-                </div>
+                </motion.div>
 
-                <div className="p-1 rounded-xl shadow-lg bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 overflow-hidden">
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.98 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.2, duration: 0.6 }}
+                    className="p-1 rounded-xl shadow-lg bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 overflow-hidden"
+                >
                     <div className="flex flex-col items-stretch justify-start md:flex-row md:items-start bg-white dark:bg-gray-900">
-
                         <div className="flex w-full grow flex-col items-stretch justify-center gap-3 py-6 px-6">
                             <p className="text-[#131118] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">
                                 This action is irreversible
@@ -31,31 +44,37 @@ export default function DeleteAccount() {
                             Please confirm the following:
                         </p>
                         <div className="space-y-1">
-                            <label className="flex gap-x-3 py-2 flex-row cursor-pointer group">
-                                <input
-                                    className="h-5 w-5 rounded border-gray-300 dark:border-gray-700 border-2 bg-transparent text-primary checked:bg-primary checked:border-primary focus:ring-0 focus:ring-offset-0 focus:outline-none transition-colors"
-                                    type="checkbox"
-                                />
-                                <p className="text-[#131118] dark:text-gray-300 text-sm font-normal leading-normal group-hover:text-primary transition-colors">
-                                    I understand my profile and all workspace data will be erased
-                                </p>
-                            </label>
-                            <label className="flex gap-x-3 py-2 flex-row cursor-pointer group">
-                                <input
-                                    className="h-5 w-5 rounded border-gray-300 dark:border-gray-700 border-2 bg-transparent text-primary checked:bg-primary checked:border-primary focus:ring-0 focus:ring-offset-0 focus:outline-none transition-colors"
-                                    type="checkbox"
-                                />
-                                <p className="text-[#131118] dark:text-gray-300 text-sm font-normal leading-normal group-hover:text-primary transition-colors">
-                                    I understand my active pro subscriptions will be cancelled
-                                    without refund
-                                </p>
-                            </label>
+                            {[
+                                "I understand my profile and all workspace data will be erased",
+                                "I understand my active pro subscriptions will be cancelled without refund"
+                            ].map((text, index) => (
+                                <motion.label
+                                    key={index}
+                                    initial={{ opacity: 0, x: -10 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ delay: 0.4 + (index * 0.1) }}
+                                    className="flex gap-x-3 py-2 flex-row cursor-pointer group"
+                                >
+                                    <input
+                                        className="h-5 w-5 rounded border-gray-300 dark:border-gray-700 border-2 bg-transparent text-primary checked:bg-primary checked:border-primary focus:ring-0 focus:ring-offset-0 focus:outline-none transition-colors"
+                                        type="checkbox"
+                                    />
+                                    <p className="text-[#131118] dark:text-gray-300 text-sm font-normal leading-normal group-hover:text-primary transition-colors">
+                                        {text}
+                                    </p>
+                                </motion.label>
+                            ))}
                         </div>
                     </div>
 
                     <div className="px-6 pb-8 space-y-4">
                         <div className="flex flex-col gap-4">
-                            <label className="flex flex-col w-full">
+                            <motion.label
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.6 }}
+                                className="flex flex-col w-full"
+                            >
                                 <p className="text-[#131118] dark:text-white text-sm font-semibold leading-normal pb-2">
                                     Reason for leaving
                                 </p>
@@ -73,8 +92,13 @@ export default function DeleteAccount() {
                                         Platform is too difficult to use
                                     </option>
                                 </select>
-                            </label>
-                            <label className="flex flex-col w-full">
+                            </motion.label>
+                            <motion.label
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.7 }}
+                                className="flex flex-col w-full"
+                            >
                                 <p className="text-[#131118] dark:text-white text-sm font-semibold leading-normal pb-2">
                                     Confirm your password
                                 </p>
@@ -83,23 +107,33 @@ export default function DeleteAccount() {
                                     placeholder="Enter your current password"
                                     type="password"
                                 />
-                            </label>
+                            </motion.label>
                         </div>
-                        <div className="flex flex-col sm:flex-row gap-3 pt-4">
-                            <button className="flex-1 flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-red-600 text-white hover:bg-red-700 text-sm font-bold leading-normal transition-colors">
+                        <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.8 }}
+                            className="flex flex-col gap-3 pt-6"
+                        >
+                            <button className="w-full flex items-center justify-center rounded-xl h-14 px-8 bg-red-600 text-white hover:bg-red-700 text-base font-bold leading-normal transition-all shadow-lg shadow-red-600/20 active:scale-[0.98]">
                                 Delete My Account
                             </button>
-                        </div>
+                        </motion.div>
                     </div>
-                </div>
+                </motion.div>
 
-                <p className="text-center text-[#6b608a] dark:text-gray-500 text-sm">
+                <motion.p
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 1, duration: 1 }}
+                    className="text-center text-[#6b608a] dark:text-gray-500 text-sm"
+                >
                     Having trouble?{" "}
                     <a className="text-primary hover:underline font-medium" href="#">
                         Contact our support team
                     </a>{" "}
                     for help instead of leaving.
-                </p>
+                </motion.p>
             </div>
         </main>
     );

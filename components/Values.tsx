@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 const values = [
     {
         title: "Productivity",
@@ -21,20 +25,48 @@ const values = [
     },
 ];
 
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.15,
+        },
+    },
+};
+
+const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+};
+
 export default function Values() {
     return (
         <section className="py-24 bg-background-light dark:bg-background-dark">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="text-center mb-16"
+                >
                     <h2 className="text-3xl font-bold text-[#131118] dark:text-white">
                         Our Core Values
                     </h2>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                </motion.div>
+                <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+                >
                     {values.map((value, index) => (
-                        <div
+                        <motion.div
                             key={index}
-                            className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow border border-gray-100 dark:border-gray-700 group"
+                            variants={itemVariants}
+                            whileHover={{ y: -8, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" }}
+                            className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 group transition-shadow"
                         >
                             <div className="w-14 h-14 rounded-xl brand-gradient flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
                                 <span className="material-symbols-outlined text-white text-3xl">
@@ -47,9 +79,9 @@ export default function Values() {
                             <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
                                 {value.description}
                             </p>
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </section>
     );

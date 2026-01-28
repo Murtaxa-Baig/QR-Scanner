@@ -1,3 +1,8 @@
+"use client";
+
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
 const faqs = [
     {
         question: "How do I cancel my subscription?",
@@ -14,6 +19,8 @@ const faqs = [
 ];
 
 export default function FAQ() {
+    const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
     return (
         <div className="mt-12 space-y-4">
             <h3 className="text-2xl font-bold text-[#131118] dark:text-white mb-6">
@@ -21,22 +28,40 @@ export default function FAQ() {
             </h3>
             <div className="space-y-3">
                 {faqs.map((faq, index) => (
-                    <details
+                    <div
                         key={index}
-                        className="group bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-xl overflow-hidden shadow-sm"
+                        className="bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-xl overflow-hidden shadow-sm"
                     >
-                        <summary className="flex items-center justify-between p-5 cursor-pointer list-none focus:outline-none">
+                        <button
+                            onClick={() => setActiveIndex(activeIndex === index ? null : index)}
+                            className="w-full flex items-center justify-between p-5 cursor-pointer focus:outline-none text-left"
+                        >
                             <span className="font-semibold text-gray-900 dark:text-white">
                                 {faq.question}
                             </span>
-                            <span className="material-symbols-outlined transition-transform group-open:rotate-180 text-gray-400">
+                            <motion.span
+                                animate={{ rotate: activeIndex === index ? 180 : 0 }}
+                                transition={{ duration: 0.3 }}
+                                className="material-symbols-outlined text-gray-400"
+                            >
                                 expand_more
-                            </span>
-                        </summary>
-                        <div className="px-5 pb-5 text-gray-600 dark:text-gray-400 text-sm leading-relaxed border-t border-gray-50 dark:border-gray-800 pt-4">
-                            {faq.answer}
-                        </div>
-                    </details>
+                            </motion.span>
+                        </button>
+                        <AnimatePresence>
+                            {activeIndex === index && (
+                                <motion.div
+                                    initial={{ height: 0, opacity: 0 }}
+                                    animate={{ height: "auto", opacity: 1 }}
+                                    exit={{ height: 0, opacity: 0 }}
+                                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                                >
+                                    <div className="px-5 pb-5 text-gray-600 dark:text-gray-400 text-sm leading-relaxed border-t border-gray-50 dark:border-gray-800 pt-4">
+                                        {faq.answer}
+                                    </div>
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+                    </div>
                 ))}
             </div>
         </div>

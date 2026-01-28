@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 const leaders = [
     {
         name: "Alex Rivera",
@@ -21,27 +25,58 @@ const leaders = [
     },
 ];
 
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.1,
+        },
+    },
+};
+
+const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+};
+
 export default function Leadership() {
     return (
         <section className="py-24 bg-background-light dark:bg-background-dark">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="text-center mb-16"
+                >
                     <h2 className="text-3xl font-bold text-[#131118] dark:text-white mb-4">
                         Meet Our Leadership
                     </h2>
                     <p className="text-gray-600 dark:text-gray-400">
                         The visionaries behind the AI Content revolution.
                     </p>
-                </div>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
+                </motion.div>
+                <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    className="grid grid-cols-2 md:grid-cols-4 gap-12"
+                >
                     {leaders.map((leader, index) => (
-                        <div key={index} className="text-center group">
+                        <motion.div
+                            key={index}
+                            variants={itemVariants}
+                            className="text-center group"
+                        >
                             <div className="relative w-32 h-32 md:w-40 md:h-40 mx-auto mb-6">
                                 <div className="absolute inset-0 brand-gradient rounded-full opacity-0 group-hover:opacity-100 transition-opacity blur-lg"></div>
-                                <div
+                                <motion.div
+                                    whileHover={{ scale: 1.05 }}
                                     className="relative w-full h-full rounded-full bg-gray-200 dark:bg-gray-700 border-4 border-white dark:border-gray-800 overflow-hidden bg-cover bg-center"
                                     style={{ backgroundImage: `url('${leader.image}')` }}
-                                ></div>
+                                ></motion.div>
                             </div>
                             <h4 className="text-lg font-bold text-[#131118] dark:text-white">
                                 {leader.name}
@@ -57,9 +92,9 @@ export default function Leadership() {
                                     public
                                 </span>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </section>
     );
