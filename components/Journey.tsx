@@ -4,19 +4,19 @@ import { motion } from "framer-motion";
 
 const milestones = [
     {
-        year: "2022",
+        year: "2024",
         title: "The Founding",
         description: "A small team of engineers and writers came together with a vision to democratize high-end AI writing tools.",
         icon: "rocket_launch",
     },
     {
-        year: "2023",
+        year: "2025",
         title: "1M Users Strong",
         description: "Our platform reached its first major milestone, helping over a million users worldwide find their voice.",
         icon: "groups",
     },
     {
-        year: "2024",
+        year: "2026",
         title: "Global Expansion",
         description: "Launched our flagship mobile apps and expanded our suite to 8 specialized AI writing categories.",
         icon: "public",

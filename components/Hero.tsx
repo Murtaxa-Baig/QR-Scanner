@@ -20,7 +20,7 @@ export default function Hero() {
                         for students, professionals, and creatives. Experience the future of
                         content generation.
                     </p>
-                    <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                   {/* <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
@@ -35,7 +35,7 @@ export default function Hero() {
                         >
                             Learn More
                         </motion.button>
-                    </div>
+                    </div> */}
                 </motion.div>
                 <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}

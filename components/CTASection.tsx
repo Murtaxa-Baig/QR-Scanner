@@ -31,8 +31,10 @@ export default function CTASection() {
                             transition={{ delay: 0.3 }}
                             className="text-xl opacity-90 mb-10 max-w-2xl mx-auto font-medium"
                         >
-                            Join over 1 million creatives and professionals who are already
-                            using AI to power their words.
+                           {/* Join over 1 million creatives and professionals who are already
+                            using AI to power their words. */}
+                            Prioritize thumb-friendly buttons and fast-loading elements since it's a mobile app landing page. Test with power words like "Instantly," "Effortless," and numbers (e.g., "8 AI Tools"). Send the first screen for tailored revisions!
+                            
                         </motion.p>
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
@@ -41,13 +43,13 @@ export default function CTASection() {
                             transition={{ delay: 0.4 }}
                             className="flex flex-col sm:flex-row justify-center gap-4"
                         >
-                            <motion.button
+                          {/*  <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                                 className="bg-white text-primary font-bold py-4 px-12 rounded-xl text-lg hover:bg-gray-100 transition-all shadow-xl"
                             >
                                 Get Started Free
-                            </motion.button>
+                            </motion.button> */}
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}

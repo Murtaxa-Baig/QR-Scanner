@@ -24,7 +24,7 @@ export default function Mission() {
                     </p>
                     <div className="mt-12 flex justify-center gap-8">
                         {[
-                            { label: "Founded", value: "2022" },
+                            { label: "Founded", value: "2024" },
                             { label: "Community", value: "1M+" },
                             { label: "Tools", value: "8+" }
                         ].map((stat, index) => (

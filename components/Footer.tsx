@@ -3,7 +3,7 @@ import Logo from "./Logo";
 
 export default function Footer() {
     return (
-        <footer className="bg-[#131118] text-white py-12 border-t border-gray-800">
+        <footer className="bg-[#131118] text-white py-4 border-t border-gray-800">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 border-b border-gray-800 pb-12">
                     <div>
@@ -17,7 +17,7 @@ export default function Footer() {
                         </p>
                     </div>
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-12">
-                        <div className="space-y-4">
+                        {/* <div className="space-y-4">
                             <h4 className="font-bold">Product</h4>
                             <ul className="text-gray-400 space-y-2 text-sm">
                                 <li>
@@ -36,25 +36,25 @@ export default function Footer() {
                                     </Link>
                                 </li>
                             </ul>
-                        </div>
+                        </div> */}
                         <div className="space-y-4">
                             <h4 className="font-bold">Company</h4>
                             <ul className="text-gray-400 space-y-2 text-sm">
                                 <li>
-                                    <Link href="#about" className="hover:text-brand-pink">
+                                    <Link href="/about" className="hover:text-brand-pink">
                                         About Us
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="#" className="hover:text-brand-pink">
-                                        Careers
+                                    <Link href="/contact" className="hover:text-brand-pink">
+                                        Contact
                                     </Link>
                                 </li>
-                                <li>
+                                {/*   <li>
                                     <Link href="#" className="hover:text-brand-pink">
                                         Blog
                                     </Link>
-                                </li>
+                                </li> */}
                             </ul>
                         </div>
                         <div className="space-y-4">
@@ -70,20 +70,20 @@ export default function Footer() {
                                         Privacy
                                     </Link>
                                 </li>
-                                <li>
+                                {/*  <li>
                                     <button className="hover:text-red-500 text-left">
                                         Delete Account
                                     </button>
-                                </li>
+                                </li> */}
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col md:flex-row justify-between items-center pt-8 gap-4">
-                    <p className="text-gray-500 text-sm">
-                        © 2024 Ai Utilities. All rights reserved.
+                <div className="flex md:flex-row justify-center items-center pt-4 gap-4">
+                    <p className="text-gray-500 text-sm ">
+                        Copyright © 2024 <a href="http://www.appnayatech.com/" target="_blank" rel="noopener noreferrer">AppNaya Technologies</a>. All rights reserved.
                     </p>
-                    <div className="flex gap-6">
+                   {/* <div className="flex gap-6">
                         <Link
                             href="#"
                             className="text-gray-500 hover:text-white transition-colors"
@@ -96,7 +96,7 @@ export default function Footer() {
                         >
                             <span className="material-symbols-outlined">alternate_email</span>
                         </Link>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </footer>
