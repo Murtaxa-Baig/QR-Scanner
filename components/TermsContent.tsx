@@ -16,15 +16,15 @@ export default function TermsContent() {
                 </h1>
                 <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 text-sm">
                     <span className="text-gray-500 dark:text-gray-400">
-                        Last Updated: June 15, 2024
+                        Last Updated: February 27, 2026
                     </span>
                     <span className="hidden sm:inline text-gray-300">|</span>
                     <a
                         className="text-primary font-medium hover:underline flex items-center gap-1"
-                        href="mailto:legal@aiutilities.com"
+                        href="mailto:Appnayatecnologoes@gmail.com"
                     >
                         <span className="material-symbols-outlined text-sm">mail</span>
-                        legal@aiutilities.com
+                        Appnayatecnologoes@gmail.com
                     </a>
                 </div>
             </motion.header>
@@ -32,156 +32,248 @@ export default function TermsContent() {
                 {[
                     {
                         id: "acceptance",
-                        title: "1. Acceptance of Terms",
+                        title: "1. Acceptance of Agreement",
+                        content: (
+                            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                                By accessing or using Ai Utilities (“Service”), you agree to be legally bound by these Terms & Conditions. If you disagree with any provision, you must immediately cease use of the Service.
+                            </p>
+                        )
+                    },
+                    {
+                        id: "definitions",
+                        title: "2. Definitions",
+                        content: (
+                            <ul className="space-y-3 text-gray-600 dark:text-gray-400">
+                                <li className="flex gap-3">
+                                    <span className="font-bold text-[#131118] dark:text-white min-w-[100px]">“Platform”:</span>
+                                    <span>Refers to Ai Utilities website.</span>
+                                </li>
+                                <li className="flex gap-3">
+                                    <span className="font-bold text-[#131118] dark:text-white min-w-[100px]">“User”:</span>
+                                    <span>Refers to any individual accessing or using the Service.</span>
+                                </li>
+                                <li className="flex gap-3">
+                                    <span className="font-bold text-[#131118] dark:text-white min-w-[100px]">“Content”:</span>
+                                    <span>Refers to AI-generated outputs and user-submitted text.</span>
+                                </li>
+                                <li className="flex gap-3">
+                                    <span className="font-bold text-[#131118] dark:text-white min-w-[100px]">“Subscription”:</span>
+                                    <span>Refers to paid access beyond daily free usage.</span>
+                                </li>
+                            </ul>
+                        )
+                    },
+                    {
+                        id: "services",
+                        title: "3. Description of Services",
                         content: (
                             <>
-                                <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
-                                    By accessing or using Ai Utilities (the &quot;Service&quot;), you agree to
-                                    be bound by these Terms &amp; Conditions. If you do not agree to all
-                                    of the terms and conditions, you may not use our Service.
+                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                                    Ai Utilities provides AI-powered tools including Essay Generator, Story Generator, Poem Generator, Email Writer, AI Summarizer, AI Paraphraser, AI Humanizer, and AI Detector.
                                 </p>
-                                <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
-                                    We reserve the right to modify these terms at any time. We will
-                                    notify users of any significant changes by posting a notice on our
-                                    platform or via email.
-                                </p>
+                                <div className="p-4 rounded-xl bg-primary/5 border border-primary/10">
+                                    <p className="text-sm text-gray-600 dark:text-gray-400 italic">
+                                        AI responses are generated using third-party AI systems and may vary in quality and accuracy.
+                                    </p>
+                                </div>
                             </>
                         )
                     },
                     {
-                        id: "service",
-                        title: "2. Use of Service",
+                        id: "eligibility",
+                        title: "4. User Eligibility",
                         content: (
-                            <>
-                                <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
-                                    The Service provides AI-powered content generation tools including
-                                    essay generators, summarizers, and humanizers. Your use of these
-                                    tools is subject to the following conditions:
-                                </p>
-                                <ol className="list-decimal pl-6 space-y-4 text-gray-600 dark:text-gray-400 mb-8">
-                                    <li className="pl-2">You must be at least 13 years of age to use this Service.</li>
-                                    <li className="pl-2">
-                                        You are responsible for maintaining the confidentiality of your
-                                        account credentials.
-                                    </li>
-                                    <li className="pl-2">
-                                        The outputs generated by the AI are for your personal or
-                                        professional use, subject to the copyright terms outlined below.
-                                    </li>
-                                    <li className="pl-2">
-                                        You acknowledge that AI outputs may occasionally be inaccurate or
-                                        biased.
-                                    </li>
-                                </ol>
-                            </>
+                            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                                Users must be at least 13 years of age. By using the Service, you confirm you meet this requirement.
+                            </p>
                         )
                     },
                     {
-                        id: "privacy",
-                        title: "3. Privacy & Data",
+                        id: "account",
+                        title: "5. Account Registration & Security",
                         content: (
-                            <>
-                                <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
-                                    Your privacy is important to us. Our use of your personal
-                                    information and data provided to the Service is governed by our
-                                    Privacy Policy. By using the Service, you consent to the collection
-                                    and use of this information.
+                            <div className="space-y-4 text-gray-600 dark:text-gray-400">
+                                <p className="leading-relaxed">
+                                    Registration is completed via Google Authentication using Firebase.
                                 </p>
-                                <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
-                                    We do not sell your personal data. Content you input into our tools
-                                    is processed to generate results and may be used in an anonymized
-                                    format to improve our models, unless you opt-out in your account
-                                    settings.
+                                <p className="leading-relaxed">
+                                    You are responsible for maintaining confidentiality of your account and all activities under it.
                                 </p>
-                            </>
+                            </div>
                         )
                     },
                     {
-                        id: "conduct",
-                        title: "4. User Conduct",
+                        id: "subscription",
+                        title: "6. Free Access and Subscription Terms",
                         content: (
-                            <>
-                                <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
-                                    You agree not to use the Service for any unlawful or prohibited
-                                    purposes. Prohibited activities include, but are not limited to:
-                                </p>
-                                <ol className="list-decimal pl-6 space-y-4 text-gray-600 dark:text-gray-400 mb-8">
-                                    <li className="pl-2">
-                                        Generating content that is defamatory, obscene, or promotes hate
-                                        speech.
-                                    </li>
-                                    <li className="pl-2">
-                                        Attempting to bypass any security measures or rate limits of the
-                                        Service.
-                                    </li>
-                                    <li className="pl-2">
-                                        Using the Service to create academic work for submission where
-                                        such use is prohibited by the educational institution.
-                                    </li>
-                                    <li className="pl-2">
-                                        Automated scraping or extraction of data from the Service without
-                                        prior written consent.
-                                    </li>
-                                </ol>
-                            </>
+                            <ul className="space-y-4 text-gray-600 dark:text-gray-400">
+                                <li className="flex gap-3">
+                                    <span className="material-symbols-outlined text-primary mt-0.5">check_circle</span>
+                                    <span>Each registered user receives three (3) free queries per day.</span>
+                                </li>
+                                <li className="flex gap-3">
+                                    <span className="material-symbols-outlined text-primary mt-0.5">check_circle</span>
+                                    <span>Unlimited access requires an active paid subscription.</span>
+                                </li>
+                                <li className="flex gap-3">
+                                    <span className="material-symbols-outlined text-primary mt-0.5">check_circle</span>
+                                    <span>Subscriptions may auto-renew unless cancelled prior to renewal.</span>
+                                </li>
+                                <li className="flex gap-3">
+                                    <span className="material-symbols-outlined text-primary mt-0.5">warning</span>
+                                    <span>Failure to comply with payment terms may result in suspension of premium features.</span>
+                                </li>
+                            </ul>
                         )
                     },
                     {
-                        id: "payments",
-                        title: "5. Payments & Billing",
+                        id: "refund",
+                        title: "7. Refund & Cancellation Policy",
+                        content: (
+                            <ul className="space-y-3 text-gray-600 dark:text-gray-400">
+                                <li>• Users may cancel subscriptions at any time.</li>
+                                <li>• Refund eligibility depends on applicable payment provider policies.</li>
+                                <li>• Ai Utilities reserves the right to refuse refund requests in cases of abuse or excessive usage.</li>
+                            </ul>
+                        )
+                    },
+                    {
+                        id: "usage",
+                        title: "8. Acceptable Use Policy",
                         content: (
                             <>
-                                <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
-                                    Certain features of Ai Utilities require a paid subscription. By
-                                    subscribing, you agree to:
-                                </p>
-                                <ol className="list-decimal pl-6 space-y-4 text-gray-600 dark:text-gray-400 mb-8">
-                                    <li className="pl-2">Provide accurate billing information.</li>
-                                    <li className="pl-2">
-                                        Pay all fees associated with your chosen plan on the designated
-                                        billing date.
-                                    </li>
-                                    <li className="pl-2">
-                                        Understand that all payments are non-refundable except as required
-                                        by law.
-                                    </li>
-                                </ol>
-                                <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
-                                    Subscriptions will automatically renew unless cancelled at least 24
-                                    hours before the end of the current billing cycle.
-                                </p>
+                                <p className="text-gray-600 dark:text-gray-400 mb-4">You agree NOT to:</p>
+                                <div className="grid md:grid-cols-2 gap-3">
+                                    {[
+                                        "Use the Service for unlawful purposes",
+                                        "Generate harmful, defamatory, or violent content",
+                                        "Violate intellectual property rights",
+                                        "Attempt to reverse engineer or exploit the platform",
+                                        "Circumvent usage limits"
+                                    ].map((item, i) => (
+                                        <div key={i} className="flex gap-2 items-center p-3 rounded-lg bg-red-50/50 dark:bg-red-900/10 border border-red-100 dark:border-red-900/20">
+                                            <span className="material-symbols-outlined text-red-500 text-sm">block</span>
+                                            <span className="text-sm text-gray-700 dark:text-gray-300">{item}</span>
+                                        </div>
+                                    ))}
+                                </div>
                             </>
                         )
                     },
                     {
                         id: "intellectual",
-                        title: "6. Intellectual Property",
+                        title: "9. Intellectual Property Rights",
+                        content: (
+                            <div className="space-y-4 text-gray-600 dark:text-gray-400">
+                                <p className="leading-relaxed">
+                                    All branding, design, structure, and software remain the exclusive property of Ai Utilities.
+                                </p>
+                                <div className="p-4 rounded-xl bg-amber-50 dark:bg-amber-900/10 border border-amber-100 dark:border-amber-900/20 font-bold text-amber-800 dark:text-amber-400">
+                                    Unauthorized copying, distribution, or resale is strictly prohibited.
+                                </div>
+                            </div>
+                        )
+                    },
+                    {
+                        id: "user-content",
+                        title: "10. User-Generated Content Responsibility",
+                        content: (
+                            <ul className="space-y-3 text-gray-600 dark:text-gray-400">
+                                <li>• You retain responsibility for any text submitted for processing.</li>
+                                <li>• You must ensure that submitted content does not violate laws or third-party rights.</li>
+                            </ul>
+                        )
+                    },
+                    {
+                        id: "disclaimer",
+                        title: "11. AI Disclaimer",
+                        content: (
+                            <div className="space-y-4 text-gray-600 dark:text-gray-400">
+                                <p className="leading-relaxed italic">
+                                    AI-generated content may contain inaccuracies, bias, or outdated information.
+                                </p>
+                                <p className="leading-relaxed">
+                                    Ai Utilities makes no guarantees regarding reliability or completeness. Users are solely responsible for verifying outputs before professional or academic use.
+                                </p>
+                            </div>
+                        )
+                    },
+                    {
+                        id: "liability",
+                        title: "12. Limitation of Liability",
                         content: (
                             <>
-                                <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
-                                    The Service, including its original content, features, and
-                                    functionality, is owned by Ai Utilities and protected by
-                                    international copyright and trademark laws.
-                                </p>
-                                <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
-                                    Regarding AI-generated outputs: We grant you a perpetual, worldwide,
-                                    non-exclusive license to use, modify, and distribute the content
-                                    generated for you through our Service for any legal purpose.
-                                </p>
+                                <p className="text-gray-600 dark:text-gray-400 mb-4">To the maximum extent permitted by law, Ai Utilities shall not be liable for:</p>
+                                <ul className="space-y-2 text-gray-600 dark:text-gray-400 pl-4">
+                                    <li>• Indirect or consequential damages</li>
+                                    <li>• Loss of profits or data</li>
+                                    <li>• Academic or professional consequences arising from AI outputs</li>
+                                </ul>
                             </>
                         )
                     },
                     {
-                        id: "termination",
-                        title: "7. Termination",
+                        id: "indemnification",
+                        title: "13. Indemnification",
                         content: (
-                            <>
-                                <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
-                                    We reserve the right to terminate or suspend your account and access
-                                    to the Service immediately, without prior notice or liability, for
-                                    any reason, including without limitation if you breach the Terms.
-                                </p>
-                            </>
+                            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                                You agree to indemnify and hold harmless Ai Utilities against claims arising from misuse or violation of these Terms.
+                            </p>
+                        )
+                    },
+                    {
+                        id: "availability",
+                        title: "14. Service Availability",
+                        content: (
+                            <div className="space-y-3 text-gray-600 dark:text-gray-400">
+                                <p>We do not guarantee uninterrupted or error-free service.</p>
+                                <p>Maintenance, updates, or external API disruptions may affect availability.</p>
+                            </div>
+                        )
+                    },
+                    {
+                        id: "termination",
+                        title: "15. Termination of Access",
+                        content: (
+                            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                                We reserve the right to suspend or terminate accounts without notice if violations occur.
+                            </p>
+                        )
+                    },
+                    {
+                        id: "modifications",
+                        title: "16. Modifications to Terms",
+                        content: (
+                            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                                We may revise these Terms at any time. Continued use constitutes acceptance of revised Terms.
+                            </p>
+                        )
+                    },
+                    {
+                        id: "governing-law",
+                        title: "17. Governing Law & Dispute Resolution",
+                        content: (
+                            <div className="space-y-3 text-gray-600 dark:text-gray-400">
+                                <p>These Terms shall be governed by applicable laws.</p>
+                                <p>Any disputes shall first be attempted to be resolved amicably before legal action.</p>
+                            </div>
+                        )
+                    },
+                    {
+                        id: "contact",
+                        title: "18. Contact Information",
+                        content: (
+                            <div className="text-center p-8 rounded-2xl bg-primary/5 border border-primary/10">
+                                <h4 className="text-xl font-bold text-[#131118] dark:text-white mb-2">Legal Inquiries</h4>
+                                <p className="text-[#6b608a] dark:text-[#a097bd] mb-6">For legal inquiries, please contact us at:</p>
+                                <a
+                                    href="mailto:Appnayatecnologoes@gmail.com"
+                                    className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-xl font-semibold hover:opacity-90 transition-opacity"
+                                >
+                                    <span className="material-symbols-outlined">mail</span>
+                                    Appnayatecnologoes@gmail.com
+                                </a>
+                            </div>
                         )
                     }
                 ].map((section, index) => (
@@ -199,46 +291,6 @@ export default function TermsContent() {
                         {section.content}
                     </motion.section>
                 ))}
-
-                <motion.section
-                    initial={{ opacity: 0, scale: 0.98 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="mt-16 p-8 bg-gray-50 dark:bg-gray-800/50 rounded-2xl border border-gray-100 dark:border-gray-700"
-                    id="contact-legal"
-                >
-                    <h2 className="text-2xl font-bold text-[#131118] dark:text-white mb-4">Legal Inquiries</h2>
-                    <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
-                        If you have any questions about these Terms &amp; Conditions, please
-                        contact our legal department:
-                    </p>
-                    <div className="flex flex-col gap-3 mt-6">
-                        <div className="flex items-center gap-3">
-                            <span className="material-symbols-outlined text-primary">
-                                email
-                            </span>
-                            <span className="text-gray-700 dark:text-gray-300">
-                                legal@aiutilities.com
-                            </span>
-                        </div>
-                        <div className="flex items-center gap-3">
-                            <span className="material-symbols-outlined text-primary">
-                                location_on
-                            </span>
-                            <span className="text-gray-700 dark:text-gray-300">
-                                123 AI Boulevard, Tech City, TC 10101
-                            </span>
-                        </div>
-                    </div>
-                    <motion.button
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                        className="mt-8 brand-gradient text-white font-bold py-3 px-8 rounded-lg transition-all shadow-lg hover:shadow-primary/20"
-                    >
-                        Contact Support Form
-                    </motion.button>
-                </motion.section>
             </div>
         </div>
     );

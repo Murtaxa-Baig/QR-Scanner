@@ -20,15 +20,15 @@ export default function PrivacyContent() {
                 </p>
                 <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 text-sm">
                     <span className="text-gray-500 dark:text-gray-400">
-                        Last Updated: October 24, 2023
+                        Last Updated: February 27, 2026
                     </span>
                     <span className="hidden sm:inline text-gray-300">|</span>
                     <a
                         className="text-primary font-medium hover:underline flex items-center gap-1"
-                        href="mailto:privacy@aiutilities.com"
+                        href="mailto:Appnayatecnologoes@gmail.com"
                     >
                         <span className="material-symbols-outlined text-sm">mail</span>
-                        privacy@aiutilities.com
+                        Appnayatecnologoes@gmail.com
                     </a>
                 </div>
             </motion.header>
@@ -36,162 +36,207 @@ export default function PrivacyContent() {
             <div className="space-y-12">
                 {[
                     {
-                        id: "intro",
-                        title: "Introduction",
+                        id: "introduction",
+                        title: "1. Introduction",
+                        content: (
+                            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                                This Privacy Policy outlines how Ai Utilities collects, processes, stores, and protects personal data.
+                            </p>
+                        )
+                    },
+                    {
+                        id: "information-collected",
+                        title: "2. Information Collected",
                         content: (
                             <>
                                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-                                    At Ai Utilities, we respect your privacy and are committed to
-                                    protecting it. This Privacy Policy explains how we collect, use, and
-                                    safeguard your information when you use our AI-powered generation
-                                    tools and platform.
+                                    We collect:
                                 </p>
-                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                    By using our services, you agree to the collection and use of
-                                    information in accordance with this policy. We ensure that your data
-                                    is handled with the highest level of security and compliance with
-                                    international data protection standards.
+                                <ul className="space-y-3 text-gray-600 dark:text-gray-400">
+                                    <li className="flex gap-3">
+                                        <span className="material-symbols-outlined text-primary mt-0.5">check_circle</span>
+                                        <span>Full Name</span>
+                                    </li>
+                                    <li className="flex gap-3">
+                                        <span className="material-symbols-outlined text-primary mt-0.5">check_circle</span>
+                                        <span>Email Address</span>
+                                    </li>
+                                    <li className="flex gap-3">
+                                        <span className="material-symbols-outlined text-primary mt-0.5">check_circle</span>
+                                        <span>Profile Photo (via Google Authentication)</span>
+                                    </li>
+                                </ul>
+                                <p className="mt-4 text-gray-600 dark:text-gray-400 leading-relaxed italic">
+                                    We do not directly collect passwords or payment card details.
                                 </p>
                             </>
                         )
                     },
                     {
-                        id: "data-collection",
-                        title: "1. Data Collection",
-                        content: (
-                            <ul className="space-y-4 text-gray-600 dark:text-gray-400">
-                                <li className="flex gap-3">
-                                    <span className="material-symbols-outlined text-primary mt-0.5">
-                                        check_circle
-                                    </span>
-                                    <span>
-                                        <strong>Personal Information:</strong> Name, email address, and
-                                        billing information when you register for an account.
-                                    </span>
-                                </li>
-                                <li className="flex gap-3">
-                                    <span className="material-symbols-outlined text-primary mt-0.5">
-                                        check_circle
-                                    </span>
-                                    <span>
-                                        <strong>Usage Data:</strong> Information on how you interact with
-                                        our AI, including the prompts you provide and the settings you
-                                        choose.
-                                    </span>
-                                </li>
-                                <li className="flex gap-3">
-                                    <span className="material-symbols-outlined text-primary mt-0.5">
-                                        check_circle
-                                    </span>
-                                    <span>
-                                        <strong>Device Information:</strong> IP address, browser type,
-                                        and operating system used to access our site.
-                                    </span>
-                                </li>
-                            </ul>
-                        )
-                    },
-                    {
-                        id: "data-usage",
-                        title: "2. How We Use Data",
+                        id: "purpose",
+                        title: "3. Purpose of Data Processing",
                         content: (
                             <>
-                                <div className="grid md:grid-cols-2 gap-4 mb-6">
-                                    <div className="p-4 rounded-xl bg-white dark:bg-[#1c182b] border border-[#f1f0f5] dark:border-[#2a2636]">
-                                        <h4 className="font-bold mb-2 text-[#131118] dark:text-white">Service Improvement</h4>
-                                        <p className="text-sm text-[#6b608a] dark:text-[#a097bd]">
-                                            We use anonymized prompts to fine-tune our algorithms and
-                                            improve output quality.
-                                        </p>
-                                    </div>
-                                    <div className="p-4 rounded-xl bg-white dark:bg-[#1c182b] border border-[#f1f0f5] dark:border-[#2a2636]">
-                                        <h4 className="font-bold mb-2 text-[#131118] dark:text-white">Personalization</h4>
-                                        <p className="text-sm text-[#6b608a] dark:text-[#a097bd]">
-                                            Remembering your preferences to provide a more tailored user
-                                            experience.
-                                        </p>
-                                    </div>
-                                </div>
-                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                    Your data is never sold to third parties. We only use it to
-                                    maintain, support, and improve the specific services you have
-                                    requested from Ai Utilities.
+                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                                    Your data is used to:
                                 </p>
+                                <div className="grid md:grid-cols-2 gap-4">
+                                    {[
+                                        "Create and manage accounts",
+                                        "Authenticate via Firebase",
+                                        "Deliver AI services",
+                                        "Improve platform performance",
+                                        "Manage subscriptions",
+                                        "Provide support"
+                                    ].map((item, i) => (
+                                        <div key={i} className="p-4 rounded-xl bg-white dark:bg-[#1c182b] border border-[#f1f0f5] dark:border-[#2a2636]">
+                                            <p className="text-sm font-medium text-[#131118] dark:text-white">{item}</p>
+                                        </div>
+                                    ))}
+                                </div>
                             </>
+                        )
+                    },
+                    {
+                        id: "legal-basis",
+                        title: "4. Legal Basis for Processing",
+                        content: (
+                            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                                Data is processed based on user consent, service necessity, and legitimate business interests.
+                            </p>
                         )
                     },
                     {
                         id: "third-party",
-                        title: "3. Third-Party Services",
+                        title: "5. Third-Party Data Processors",
                         content: (
                             <div className="bg-primary/5 rounded-xl p-6 border border-primary/10">
-                                <div className="flex flex-col md:flex-row gap-6">
+                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">We use:</p>
+                                <div className="space-y-4">
                                     <div className="flex items-start gap-4">
-                                        <span className="material-symbols-outlined text-primary">
-                                            cloud
-                                        </span>
+                                        <span className="material-symbols-outlined text-primary">security</span>
                                         <div>
-                                            <h4 className="font-bold text-[#131118] dark:text-white text-base">AI Model Infrastructure</h4>
-                                            <p className="text-sm text-[#6b608a] dark:text-[#a097bd]">
-                                                Prompts are processed via API through providers like OpenAI
-                                                and Anthropic. Your data is not used by these providers to
-                                                train their public models based on our enterprise agreement.
-                                            </p>
+                                            <h4 className="font-bold text-[#131118] dark:text-white text-base">Firebase</h4>
+                                            <p className="text-sm text-[#6b608a] dark:text-[#a097bd]">Authentication services</p>
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-4">
-                                        <span className="material-symbols-outlined text-primary">
-                                            payments
-                                        </span>
+                                        <span className="material-symbols-outlined text-primary">psychology</span>
                                         <div>
-                                            <h4 className="font-bold text-[#131118] dark:text-white text-base">Payment Processing</h4>
-                                            <p className="text-sm text-[#6b608a] dark:text-[#a097bd]">
-                                                We use Stripe for secure billing. We never store your full
-                                                credit card details on our own servers.
-                                            </p>
+                                            <h4 className="font-bold text-[#131118] dark:text-white text-base">Claude API</h4>
+                                            <p className="text-sm text-[#6b608a] dark:text-[#a097bd]">AI generation services</p>
                                         </div>
                                     </div>
+                                </div>
+                                <p className="mt-4 text-xs text-[#6b608a] dark:text-[#a097bd] italic">
+                                    These providers may process data under their own privacy policies.
+                                </p>
+                            </div>
+                        )
+                    },
+                    {
+                        id: "security",
+                        title: "6. Data Security Measures",
+                        content: (
+                            <div className="space-y-4">
+                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                                    We implement technical safeguards to protect data from unauthorized access.
+                                </p>
+                                <div className="p-4 rounded-xl bg-amber-50 dark:bg-amber-900/10 border border-amber-100 dark:border-amber-900/20">
+                                    <p className="text-sm text-amber-700 dark:text-amber-400">
+                                        <strong>Notice:</strong> However, no digital system is completely secure.
+                                    </p>
                                 </div>
                             </div>
                         )
                     },
                     {
+                        id: "retention",
+                        title: "7. Data Retention Policy",
+                        content: (
+                            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                                Personal data is retained while the account is active or as legally required. Users may request deletion at any time.
+                            </p>
+                        )
+                    },
+                    {
+                        id: "international-transfers",
+                        title: "8. International Data Transfers",
+                        content: (
+                            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                                Data may be processed by third-party services located in other jurisdictions.
+                            </p>
+                        )
+                    },
+                    {
                         id: "user-rights",
-                        title: "4. User Rights",
+                        title: "9. User Rights",
                         content: (
                             <>
                                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-                                    Depending on your location, you may have the following rights
-                                    regarding your personal data:
+                                    Users may request:
                                 </p>
                                 <div className="space-y-3">
-                                    <motion.div whileHover={{ x: 5 }} className="flex items-center justify-between p-4 rounded-lg bg-[#f1f0f5] dark:bg-white/5 cursor-pointer">
-                                        <span className="font-medium text-[#131118] dark:text-white">Right to Access and Portability</span>
-                                        <span className="material-symbols-outlined text-[#6b608a]">
-                                            chevron_right
-                                        </span>
-                                    </motion.div>
-                                    <motion.div whileHover={{ x: 5 }} className="flex items-center justify-between p-4 rounded-lg bg-[#f1f0f5] dark:bg-white/5 cursor-pointer">
-                                        <span className="font-medium text-[#131118] dark:text-white">
-                                            Right to Rectification or Erasure (&quot;Right to be
-                                            Forgotten&quot;)
-                                        </span>
-                                        <span className="material-symbols-outlined text-[#6b608a]">
-                                            chevron_right
-                                        </span>
-                                    </motion.div>
-                                    <motion.div whileHover={{ x: 5 }} className="flex items-center justify-between p-4 rounded-lg bg-[#f1f0f5] dark:bg-white/5 cursor-pointer">
-                                        <span className="font-medium text-[#131118] dark:text-white">Right to Restrict Processing</span>
-                                        <span className="material-symbols-outlined text-[#6b608a]">
-                                            chevron_right
-                                        </span>
-                                    </motion.div>
+                                    {[
+                                        "Access to personal data",
+                                        "Correction of inaccuracies",
+                                        "Deletion of data",
+                                        "Account termination"
+                                    ].map((right, i) => (
+                                        <motion.div key={i} whileHover={{ x: 5 }} className="flex items-center justify-between p-4 rounded-lg bg-[#f1f0f5] dark:bg-white/5 cursor-pointer">
+                                            <span className="font-medium text-[#131118] dark:text-white">{right}</span>
+                                            <span className="material-symbols-outlined text-[#6b608a]">chevron_right</span>
+                                        </motion.div>
+                                    ))}
                                 </div>
                                 <p className="mt-6 text-[#6b608a] dark:text-[#a097bd] italic text-sm text-center">
-                                    To exercise these rights, please contact our Data Protection Officer
-                                    at privacy@aiutilities.com
+                                    Requests should be sent via email.
                                 </p>
                             </>
+                        )
+                    },
+                    {
+                        id: "cookies",
+                        title: "10. Cookies & Technical Information",
+                        content: (
+                            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                                The platform may use essential session mechanisms necessary for authentication and security.
+                            </p>
+                        )
+                    },
+                    {
+                        id: "childrens-privacy",
+                        title: "11. Children's Privacy",
+                        content: (
+                            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                                We do not knowingly collect information from children under 13.
+                            </p>
+                        )
+                    },
+                    {
+                        id: "policy-updates",
+                        title: "12. Policy Updates",
+                        content: (
+                            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                                We reserve the right to update this Privacy Policy. Changes become effective upon publication.
+                            </p>
+                        )
+                    },
+                    {
+                        id: "contact",
+                        title: "13. Contact Information",
+                        content: (
+                            <div className="text-center p-8 rounded-2xl bg-primary/5 border border-primary/10">
+                                <h4 className="text-xl font-bold text-[#131118] dark:text-white mb-2">Questions or Data Requests?</h4>
+                                <p className="text-[#6b608a] dark:text-[#a097bd] mb-6">For privacy concerns or data requests, please contact us at:</p>
+                                <a
+                                    href="mailto:Appnayatecnologoes@gmail.com"
+                                    className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-xl font-semibold hover:opacity-90 transition-opacity"
+                                >
+                                    <span className="material-symbols-outlined">mail</span>
+                                    Appnayatecnologoes@gmail.com
+                                </a>
+                            </div>
                         )
                     }
                 ].map((section, index) => (
