@@ -9,11 +9,10 @@ export default function Footer() {
                     <div>
                         <div className="flex items-center gap-2 mb-4">
                             <Logo size={36} />
-                            <span className="text-xl font-bold">AI Writer</span>
+                            <span className="text-xl font-bold">Savebit</span>
                         </div>
                         <p className="text-gray-400 text-sm max-w-xs">
-                            Revolutionizing the way you write with high-performance AI tools
-                            for every occasion.
+                            Your ultimate secure vault for passwords and identities.
                         </p>
                     </div>
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-12">
@@ -41,17 +40,12 @@ export default function Footer() {
                             <h4 className="font-bold">Company</h4>
                             <ul className="text-gray-400 space-y-2 text-sm">
                                 <li>
-                                    <Link href="/about" className="hover:text-brand-pink">
-                                        About
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/contact" className="hover:text-brand-pink">
+                                    <Link href="/contact" className="hover:text-primary">
                                         Contact
                                     </Link>
                                 </li>
                                 {/*   <li>
-                                    <Link href="#" className="hover:text-brand-pink">
+                                    <Link href="#" className="hover:text-primary">
                                         Blog
                                     </Link>
                                 </li> */}
@@ -61,12 +55,12 @@ export default function Footer() {
                             <h4 className="font-bold">Legal</h4>
                             <ul className="text-gray-400 space-y-2 text-sm">
                                 <li>
-                                    <Link href="/terms" className="hover:text-brand-pink">
+                                    <Link href="/terms" className="hover:text-primary">
                                         Terms
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/privacy" className="hover:text-brand-pink">
+                                    <Link href="/privacy" className="hover:text-primary">
                                         Privacy
                                     </Link>
                                 </li>

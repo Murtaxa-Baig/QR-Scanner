@@ -30,7 +30,7 @@ export default function Navbar() {
                             href="/"
                             className="text-[#131118] dark:text-white text-xl font-bold tracking-tight truncate"
                         >
-                            AI Writer
+                            Savebit
                         </Link>
                     </div>
 
@@ -87,10 +87,6 @@ function NavLinks({ mobile = false, onClick }: NavLinksProps) {
         <>
             <Link href="/" onClick={onClick} className={linkClass("/")}>
                 Home
-            </Link>
-
-            <Link href="/about" onClick={onClick} className={linkClass("/about")}>
-                About
             </Link>
 
             <Link href="/contact" onClick={onClick} className={linkClass("/contact")}>

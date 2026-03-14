@@ -40,7 +40,7 @@ export default function PrivacyContent() {
                         title: "1. Introduction",
                         content: (
                             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                This Privacy Policy outlines how AI Writer collects, processes, stores, and protects personal data.
+                                This Privacy Policy outlines how Savebit collects, processes, encrypts, and protects personal and vault data.
                             </p>
                         )
                     },
@@ -55,19 +55,19 @@ export default function PrivacyContent() {
                                 <ul className="space-y-3 text-gray-600 dark:text-gray-400">
                                     <li className="flex gap-3">
                                         <span className="material-symbols-outlined text-primary mt-0.5">check_circle</span>
-                                        <span>Full Name</span>
+                                        <span>Full Name (via Authentication)</span>
                                     </li>
                                     <li className="flex gap-3">
                                         <span className="material-symbols-outlined text-primary mt-0.5">check_circle</span>
-                                        <span>Email Address</span>
+                                        <span>Email Address (via Authentication)</span>
                                     </li>
                                     <li className="flex gap-3">
                                         <span className="material-symbols-outlined text-primary mt-0.5">check_circle</span>
-                                        <span>Profile Photo (via Google Authentication)</span>
+                                        <span>Encrypted Vault Data (zero-knowledge)</span>
                                     </li>
                                 </ul>
-                                <p className="mt-4 text-gray-600 dark:text-gray-400 leading-relaxed italic">
-                                    We do not directly collect passwords or payment card details.
+                                <p className="mt-4 text-gray-600 dark:text-gray-400 leading-relaxed italic font-bold">
+                                    We DO NOT and CANNOT know your Master Password or the raw, unencrypted contents of your Vault.
                                 </p>
                             </>
                         )
@@ -84,10 +84,10 @@ export default function PrivacyContent() {
                                     {[
                                         "Create and manage accounts",
                                         "Authenticate via Firebase",
-                                        "Deliver AI services",
-                                        "Improve platform performance",
+                                        "Sync Encrypted Vault Data",
+                                        "Enable Biometric Logins locally",
                                         "Manage subscriptions",
-                                        "Provide support"
+                                        "Provide secure cloud backup"
                                     ].map((item, i) => (
                                         <div key={i} className="p-4 rounded-xl bg-white dark:bg-[#1c182b] border border-[#f1f0f5] dark:border-[#2a2636]">
                                             <p className="text-sm font-medium text-[#131118] dark:text-white">{item}</p>
@@ -102,7 +102,7 @@ export default function PrivacyContent() {
                         title: "4. Legal Basis for Processing",
                         content: (
                             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                Data is processed based on user consent, service necessity, and legitimate business interests.
+                                Data is processed based on user consent, service necessity, and our legitimate interests in providing secure credential management.
                             </p>
                         )
                     },
@@ -117,36 +117,31 @@ export default function PrivacyContent() {
                                         <span className="material-symbols-outlined text-primary">security</span>
                                         <div>
                                             <h4 className="font-bold text-[#131118] dark:text-white text-base">Firebase</h4>
-                                            <p className="text-sm text-[#6b608a] dark:text-[#a097bd]">Authentication services</p>
+                                            <p className="text-sm text-[#6b608a] dark:text-[#a097bd]">Authentication and encrypted data syncing</p>
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-4">
-                                        <span className="material-symbols-outlined text-primary">psychology</span>
+                                        <span className="material-symbols-outlined text-primary">cloud</span>
                                         <div>
-                                            <h4 className="font-bold text-[#131118] dark:text-white text-base">Claude API</h4>
-                                            <p className="text-sm text-[#6b608a] dark:text-[#a097bd]">AI generation services</p>
+                                            <h4 className="font-bold text-[#131118] dark:text-white text-base">Secure Cloud Backups</h4>
+                                            <p className="text-sm text-[#6b608a] dark:text-[#a097bd]">Encrypted backend storage infrastructure</p>
                                         </div>
                                     </div>
                                 </div>
                                 <p className="mt-4 text-xs text-[#6b608a] dark:text-[#a097bd] italic">
-                                    These providers may process data under their own privacy policies.
+                                    These providers only host the ciphertext of your Vault. They do not have access to keys to decrypt your items.
                                 </p>
                             </div>
                         )
                     },
                     {
                         id: "security",
-                        title: "6. Data Security Measures",
+                        title: "6. Zero-Knowledge Encryption Security",
                         content: (
                             <div className="space-y-4">
                                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                    We implement technical safeguards to protect data from unauthorized access.
+                                    Savebit encrypts all passwords and identity data on your local device before transmitting them to our servers. Only you possess the Master Password required to decrypt this data. You are solely responsible for ensuring your local devices remain secure from malware or physical breaches.
                                 </p>
-                                <div className="p-4 rounded-xl bg-amber-50 dark:bg-amber-900/10 border border-amber-100 dark:border-amber-900/20">
-                                    <p className="text-sm text-amber-700 dark:text-amber-400">
-                                        <strong>Notice:</strong> However, no digital system is completely secure.
-                                    </p>
-                                </div>
                             </div>
                         )
                     },
@@ -155,7 +150,7 @@ export default function PrivacyContent() {
                         title: "7. Data Retention Policy",
                         content: (
                             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                Personal data is retained while the account is active or as legally required. Users may request deletion at any time.
+                                Encrypted personal data is retained while the account is active. Soft-deleted Trash items may be permanently cleared manually or via routine local schedules. 
                             </p>
                         )
                     },
@@ -164,7 +159,7 @@ export default function PrivacyContent() {
                         title: "8. International Data Transfers",
                         content: (
                             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                Data may be processed by third-party services located in other jurisdictions.
+                                Data may be processed by third-party services located in other jurisdictions, governed by secure transmission standards.
                             </p>
                         )
                     },
@@ -178,9 +173,9 @@ export default function PrivacyContent() {
                                 </p>
                                 <div className="space-y-3">
                                     {[
-                                        "Access to personal data",
-                                        "Correction of inaccuracies",
-                                        "Deletion of data",
+                                        "Access to non-vault account data",
+                                        "Correction of account details",
+                                        "Complete deletion of Remote Vault",
                                         "Account termination"
                                     ].map((right, i) => (
                                         <motion.div key={i} whileHover={{ x: 5 }} className="flex items-center justify-between p-4 rounded-lg bg-[#f1f0f5] dark:bg-white/5 cursor-pointer">
@@ -200,7 +195,7 @@ export default function PrivacyContent() {
                         title: "10. Cookies & Technical Information",
                         content: (
                             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                The platform may use essential session mechanisms necessary for authentication and security.
+                                The platform may use essential session mechanisms necessary for biometric authentication, session timeouts, and cross-device sync.
                             </p>
                         )
                     },

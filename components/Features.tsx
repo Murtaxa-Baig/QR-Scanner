@@ -2,64 +2,6 @@
 
 import { motion } from "framer-motion";
 
-const features = [
-    {
-        title: "Essay Generator",
-        description: "Create structured, academic-grade essays in minutes.",
-        icon: "description",
-    },
-    {
-        title: "Story Generator",
-        description: "Draft creative fictional worlds and compelling narratives.",
-        icon: "auto_stories",
-    },
-    {
-        title: "Poem Generator",
-        description: "Compose beautiful, rhythmic poetry with AI assistance.",
-        icon: "ink_pen",
-    },
-    {
-        title: "Email Writer",
-        description: "Draft professional workplace emails instantly.",
-        icon: "mail",
-    },
-    {
-        title: "AI Summarizer",
-        description: "Condense long documents into readable summaries.",
-        icon: "summarize",
-    },
-    {
-        title: "AI Paraphraser",
-        description: "Rewrite content while maintaining the original meaning.",
-        icon: "sync_alt",
-    },
-    {
-        title: "AI Humanizer",
-        description: "Transform robotic AI text into natural human speech.",
-        icon: "face",
-    },
-    {
-        title: "AI Detector",
-        description: "Scan and identify AI-generated text patterns.",
-        icon: "shield",
-    },
-];
-
-const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-        opacity: 1,
-        transition: {
-            staggerChildren: 0.1,
-        },
-    },
-};
-
-const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-};
-
 export default function Features() {
     return (
         <section id="features" className="bg-white dark:bg-gray-900 py-20 border-y border-gray-100 dark:border-gray-800">
@@ -71,38 +13,63 @@ export default function Features() {
                     className="text-center mb-16"
                 >
                     <h2 className="text-3xl font-bold text-[#131118] dark:text-white mb-4">
-                        Advanced Writing Tools
+                        Powerful Security Features
                     </h2>
                     <p className="text-gray-600 dark:text-gray-400">
-                        Everything you need to create compelling content effortlessly
+                        Everything you need to manage your passwords and identities securely.
                     </p>
                 </motion.div>
-                <motion.div
-                    variants={containerVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
-                >
-                    {features.map((feature, index) => (
-                        <motion.div
-                            key={index}
-                            variants={itemVariants}
-                            whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)" }}
-                            className="feature-card border border-gray-100 dark:border-gray-800 bg-gradient-to-br from-primary/5 to-brand-pink/5 dark:from-primary/10 dark:to-brand-pink/10 p-6 rounded-xl transition-all duration-300 hover:brand-gradient group"
-                        >
-                            <span className="material-symbols-outlined text-primary group-hover:text-white text-3xl mb-4 transition-colors">
-                                {feature.icon}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    {/* Password Card */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        whileHover={{ y: -5, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1)" }}
+                        className="brand-gradient text-white p-8 rounded-2xl shadow-lg flex flex-col h-full transition-all duration-300"
+                    >
+                        <div className="bg-white/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 backdrop-blur-sm">
+                            <span className="material-symbols-outlined text-4xl text-white">
+                                password
                             </span>
-                            <h3 className="text-lg font-bold text-[#131118] dark:text-white group-hover:text-white mb-2 transition-colors">
-                                {feature.title}
-                            </h3>
-                            <p className="text-sm text-gray-600 dark:text-gray-400 group-hover:text-white/90 transition-colors">
-                                {feature.description}
-                            </p>
-                        </motion.div>
-                    ))}
-                </motion.div>
+                        </div>
+                        <h3 className="text-2xl font-bold mb-4">Save Password</h3>
+                        <p className="opacity-90 mb-6 flex-1">
+                            Store your passwords with top-tier security. Keep track of all essential details in one place and generate strong, secure passwords instantly with weak, medium, or strong strength options.
+                        </p>
+                        <ul className="space-y-3 opacity-90">
+                            <li className="flex items-center gap-2"><span className="material-symbols-outlined text-sm">check_circle</span> Item Name & Username</li>
+                            <li className="flex items-center gap-2"><span className="material-symbols-outlined text-sm">check_circle</span> Website URL & Category</li>
+                            <li className="flex items-center gap-2"><span className="material-symbols-outlined text-sm">check_circle</span> Secure Notes</li>
+                        </ul>
+                    </motion.div>
+
+                    {/* Identity Card */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2 }}
+                        whileHover={{ y: -5, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1)" }}
+                        className="identity-gradient text-white p-8 rounded-2xl shadow-lg flex flex-col h-full transition-all duration-300"
+                    >
+                        <div className="bg-white/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 backdrop-blur-sm">
+                            <span className="material-symbols-outlined text-4xl text-white">
+                                badge
+                            </span>
+                        </div>
+                        <h3 className="text-2xl font-bold mb-4">Save Identity</h3>
+                        <p className="opacity-90 mb-6 flex-1">
+                            Keep your personal information safe and easily accessible for quick form filling and secure record-keeping. Organized and always encrypted.
+                        </p>
+                        <ul className="space-y-3 opacity-90">
+                            <li className="flex items-center gap-2"><span className="material-symbols-outlined text-sm">check_circle</span> Identity Title & Full Name</li>
+                            <li className="flex items-center gap-2"><span className="material-symbols-outlined text-sm">check_circle</span> Email & Phone Number</li>
+                            <li className="flex items-center gap-2"><span className="material-symbols-outlined text-sm">check_circle</span> Address Details</li>
+                            <li className="flex items-center gap-2"><span className="material-symbols-outlined text-sm">check_circle</span> Secure Notes</li>
+                        </ul>
+                    </motion.div>
+                </div>
             </div>
         </section>
     );
