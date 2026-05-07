@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Savebit",
+  title: "PassVault",
   description: "Secure Password and Identity Manager",
 };
 

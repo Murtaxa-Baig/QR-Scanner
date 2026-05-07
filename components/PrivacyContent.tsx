@@ -40,7 +40,7 @@ export default function PrivacyContent() {
                         title: "1. Introduction",
                         content: (
                             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                This Privacy Policy outlines how Savebit collects, processes, encrypts, and protects personal and vault data.
+                                This Privacy Policy outlines how PassVault collects, processes, encrypts, and protects personal and vault data.
                             </p>
                         )
                     },
@@ -140,7 +140,7 @@ export default function PrivacyContent() {
                         content: (
                             <div className="space-y-4">
                                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                    Savebit encrypts all passwords and identity data on your local device before transmitting them to our servers. Only you possess the Master Password required to decrypt this data. You are solely responsible for ensuring your local devices remain secure from malware or physical breaches.
+                                    PassVault encrypts all passwords and identity data on your local device before transmitting them to our servers. Only you possess the Master Password required to decrypt this data. You are solely responsible for ensuring your local devices remain secure from malware or physical breaches.
                                 </p>
                             </div>
                         )
