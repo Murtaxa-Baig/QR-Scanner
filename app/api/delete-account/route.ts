@@ -12,7 +12,7 @@ export async function POST(request: Request) {
             );
         }
 
-        const apiUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://10.128.178.137:4000/api/v1/web/delete-account";
+        const apiUrl = process.env.NEXT_PUBLIC_BASE_URL!;
 
         const response = await fetch(apiUrl, {
             method: "POST",
