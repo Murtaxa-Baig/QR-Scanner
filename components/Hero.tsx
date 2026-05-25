@@ -12,7 +12,7 @@ export default function Hero() {
                 className="w-full max-w-4xl"
             >
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-[#131118] dark:text-white leading-[1.1] mb-8 tracking-tight mx-auto">
-                    Secure Your Digital Life with PassVault
+                    Secure Your Digital Life with Password Manager
                 </h1>
                 <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10">
                     The ultimate vault for your passwords, identities, and sensitive data. With advanced biometric verification, generating strong passwords and organizing your credentials has never been easier or more secure.

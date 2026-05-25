@@ -17,7 +17,7 @@ export default function AboutSection() {
                         Complete Control Over Your Data
                     </h2>
                     <p className="text-gray-600 dark:text-gray-400 mb-10 text-lg leading-relaxed max-w-2xl mx-auto">
-                        Manage your digital vault effortlessly with intuitive tools built right into PassVault. Sort, filter, and recover your credentials whenever you need them.
+                        Manage your digital vault effortlessly with intuitive tools built right into Password Manager. Sort, filter, and recover your credentials whenever you need them.
                     </p>
                     <ul className="space-y-4 max-w-xl mx-auto text-left">
                         {[

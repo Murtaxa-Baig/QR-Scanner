@@ -35,7 +35,7 @@ export default function TermsContent() {
                         title: "1. Acceptance of Agreement",
                         content: (
                             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                By accessing or using PassVault (“Service”), you agree to be legally bound by these Terms & Conditions. If you disagree with any provision, you must immediately cease use of the Service.
+                                By accessing or using Password Manager (“Service”), you agree to be legally bound by these Terms & Conditions. If you disagree with any provision, you must immediately cease use of the Service.
                             </p>
                         )
                     },
@@ -46,7 +46,7 @@ export default function TermsContent() {
                             <ul className="space-y-3 text-gray-600 dark:text-gray-400">
                                 <li className="flex gap-3">
                                     <span className="font-bold text-[#131118] dark:text-white min-w-[100px]">“Platform”:</span>
-                                    <span>Refers to the PassVault website and applications.</span>
+                                    <span>Refers to the Password Manager website and applications.</span>
                                 </li>
                                 <li className="flex gap-3">
                                     <span className="font-bold text-[#131118] dark:text-white min-w-[100px]">“User”:</span>
@@ -69,11 +69,11 @@ export default function TermsContent() {
                         content: (
                             <>
                                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-                                    PassVault provides secure digital vault services including Password Management, Identity Storage, Password Generation, and Biometric Authentication.
+                                    Password Manager provides secure digital vault services including Password Management, Identity Storage, Password Generation, and Biometric Authentication.
                                 </p>
                                 <div className="p-4 rounded-xl bg-primary/5 border border-primary/10">
                                     <p className="text-sm text-gray-600 dark:text-gray-400 italic">
-                                        PassVault employs zero-knowledge encryption architecture. We cannot retrieve, reset, or access your Master Password under any circumstances.
+                                        Password Manager employs zero-knowledge encryption architecture. We cannot retrieve, reset, or access your Master Password under any circumstances.
                                     </p>
                                 </div>
                             </>
@@ -117,7 +117,7 @@ export default function TermsContent() {
                                 </li>
                                 <li className="flex gap-3">
                                     <span className="material-symbols-outlined text-primary mt-0.5">warning</span>
-                                    <span>PassVault is not liable for data loss due to lapsed subscription backups (if applicable).</span>
+                                    <span>Password Manager is not liable for data loss due to lapsed subscription backups (if applicable).</span>
                                 </li>
                             </ul>
                         )
@@ -161,7 +161,7 @@ export default function TermsContent() {
                         content: (
                             <div className="space-y-4 text-gray-600 dark:text-gray-400">
                                 <p className="leading-relaxed">
-                                    All branding, design, structure, and software remain the exclusive property of PassVault. Your Vault data remains exclusively yours.
+                                    All branding, design, structure, and software remain the exclusive property of Password Manager. Your Vault data remains exclusively yours.
                                 </p>
                             </div>
                         )
@@ -172,7 +172,7 @@ export default function TermsContent() {
                         content: (
                             <ul className="space-y-3 text-gray-600 dark:text-gray-400">
                                 <li>• You retain sole responsibility for any text, passwords, or identities submitted to your Vault.</li>
-                                <li>• PassVault cannot moderate or review Vault contents due to zero-knowledge encryption.</li>
+                                <li>• Password Manager cannot moderate or review Vault contents due to zero-knowledge encryption.</li>
                             </ul>
                         )
                     },
@@ -181,7 +181,7 @@ export default function TermsContent() {
                         title: "11. Limitation of Liability",
                         content: (
                             <>
-                                <p className="text-gray-600 dark:text-gray-400 mb-4">To the maximum extent permitted by law, PassVault shall not be liable for:</p>
+                                <p className="text-gray-600 dark:text-gray-400 mb-4">To the maximum extent permitted by law, Password Manager shall not be liable for:</p>
                                 <ul className="space-y-2 text-gray-600 dark:text-gray-400 pl-4">
                                     <li>• Indirect or consequential damages</li>
                                     <li>• Loss of data due to forgotten Master Passwords or local device compromise</li>
@@ -195,7 +195,7 @@ export default function TermsContent() {
                         title: "12. Indemnification",
                         content: (
                             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                You agree to indemnify and hold harmless PassVault against claims arising from misuse or violation of these Terms.
+                                You agree to indemnify and hold harmless Password Manager against claims arising from misuse or violation of these Terms.
                             </p>
                         )
                     },

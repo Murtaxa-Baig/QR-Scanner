@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "PassVault",
+  title: "Password Manager",
   description: "Secure Password and Identity Manager",
 };
 

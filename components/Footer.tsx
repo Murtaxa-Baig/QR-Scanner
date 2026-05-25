@@ -9,7 +9,7 @@ export default function Footer() {
                     <div>
                         <div className="flex items-center gap-2 mb-4">
                             <Logo size={36} />
-                            <span className="text-xl font-bold">PassVault</span>
+                            <span className="text-xl font-bold">Password Manager</span>
                         </div>
                         <p className="text-gray-400 text-sm max-w-xs">
                             Your ultimate secure vault for passwords and identities.
