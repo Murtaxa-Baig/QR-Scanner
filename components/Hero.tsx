@@ -12,10 +12,10 @@ export default function Hero() {
                 className="w-full max-w-4xl"
             >
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-[#131118] dark:text-white leading-[1.1] mb-8 tracking-tight mx-auto">
-                    Secure Your Digital Life with Password Manager
+                    Scan, Generate, and Save with QR Scanner
                 </h1>
                 <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10">
-                    The ultimate vault for your passwords, identities, and sensitive data. With advanced biometric verification, generating strong passwords and organizing your credentials has never been easier or more secure.
+                    The ultimate utility for all your QR codes and barcodes. Instantly scan, read, and generate codes. Keep your scan history secure, sync data across devices with seamless authentication, and customize your profile with library photo uploads.
                 </p>
                {/* <div className="flex flex-col sm:flex-row justify-center gap-4">
                     <motion.button

@@ -15,12 +15,12 @@ export default function PrivacyContent() {
                     Privacy Policy
                 </h1>
                 <p className="text-[#6b608a] dark:text-[#a097bd] text-lg font-normal leading-normal mb-6">
-                    Transparent information on how we handle your data and protect your
-                    privacy in our AI ecosystem.
+                    Transparent information on how we handle your data, permissions, and protect your
+                    privacy in our utility ecosystem.
                 </p>
                 <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 text-sm">
                     <span className="text-gray-500 dark:text-gray-400">
-                        Last Updated: February 27, 2026
+                        Last Updated: June 13, 2026
                     </span>
                     <span className="hidden sm:inline text-gray-300">|</span>
                     <a
@@ -32,7 +32,7 @@ export default function PrivacyContent() {
                     </a>
                 </div>
             </motion.header>
-
+ 
             <div className="space-y-12">
                 {[
                     {
@@ -40,34 +40,38 @@ export default function PrivacyContent() {
                         title: "1. Introduction",
                         content: (
                             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                This Privacy Policy outlines how Password Manager collects, processes, encrypts, and protects personal and vault data.
+                                This Privacy Policy outlines how QR Scanner collects, processes, stores, and protects personal data, scan history, camera inputs, and library assets.
                             </p>
                         )
                     },
                     {
                         id: "information-collected",
-                        title: "2. Information Collected",
+                        title: "2. Information & Permissions Collected",
                         content: (
                             <>
                                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-                                    We collect:
+                                    We collect and request access to:
                                 </p>
                                 <ul className="space-y-3 text-gray-600 dark:text-gray-400">
                                     <li className="flex gap-3">
                                         <span className="material-symbols-outlined text-primary mt-0.5">check_circle</span>
-                                        <span>Full Name (via Authentication)</span>
+                                        <span>Full Name & Email Address (via secure Authentication)</span>
                                     </li>
                                     <li className="flex gap-3">
                                         <span className="material-symbols-outlined text-primary mt-0.5">check_circle</span>
-                                        <span>Email Address (via Authentication)</span>
+                                        <span>Camera Access (strictly requested to scan QR codes and barcodes in real-time)</span>
                                     </li>
                                     <li className="flex gap-3">
                                         <span className="material-symbols-outlined text-primary mt-0.5">check_circle</span>
-                                        <span>Encrypted Vault Data (zero-knowledge)</span>
+                                        <span>Photo Library Access (strictly requested to let you select and upload a custom profile picture)</span>
+                                    </li>
+                                    <li className="flex gap-3">
+                                        <span className="material-symbols-outlined text-primary mt-0.5">check_circle</span>
+                                        <span>Scan & Generation History (saved in the database to sync across your devices)</span>
                                     </li>
                                 </ul>
                                 <p className="mt-4 text-gray-600 dark:text-gray-400 leading-relaxed italic font-bold">
-                                    We DO NOT and CANNOT know your Master Password or the raw, unencrypted contents of your Vault.
+                                    We DO NOT process or stream camera footage to our servers; all frame analysis for code reading is done locally on your device.
                                 </p>
                             </>
                         )
@@ -82,12 +86,12 @@ export default function PrivacyContent() {
                                 </p>
                                 <div className="grid md:grid-cols-2 gap-4">
                                     {[
-                                        "Create and manage accounts",
-                                        "Authenticate via Firebase",
-                                        "Sync Encrypted Vault Data",
-                                        "Enable Biometric Logins locally",
-                                        "Manage subscriptions",
-                                        "Provide secure cloud backup"
+                                        "Create and manage user accounts",
+                                        "Authenticate users via Firebase",
+                                        "Sync scan and generation history to the cloud",
+                                        "Store and display your selected profile photo",
+                                        "Support code detection features on-device",
+                                        "Provide secure database backup"
                                     ].map((item, i) => (
                                         <div key={i} className="p-4 rounded-xl bg-white dark:bg-[#1c182b] border border-[#f1f0f5] dark:border-[#2a2636]">
                                             <p className="text-sm font-medium text-[#131118] dark:text-white">{item}</p>
@@ -102,7 +106,7 @@ export default function PrivacyContent() {
                         title: "4. Legal Basis for Processing",
                         content: (
                             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                Data is processed based on user consent, service necessity, and our legitimate interests in providing secure credential management.
+                                Data is processed based on user consent (such as granting camera/library permissions), service necessity, and our legitimate interests in providing secure scan log storage.
                             </p>
                         )
                     },
@@ -117,30 +121,30 @@ export default function PrivacyContent() {
                                         <span className="material-symbols-outlined text-primary">security</span>
                                         <div>
                                             <h4 className="font-bold text-[#131118] dark:text-white text-base">Firebase</h4>
-                                            <p className="text-sm text-[#6b608a] dark:text-[#a097bd]">Authentication and encrypted data syncing</p>
+                                            <p className="text-sm text-[#6b608a] dark:text-[#a097bd]">Authentication, Firestore database, and Cloud Storage for profile files</p>
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-4">
                                         <span className="material-symbols-outlined text-primary">cloud</span>
                                         <div>
-                                            <h4 className="font-bold text-[#131118] dark:text-white text-base">Secure Cloud Backups</h4>
-                                            <p className="text-sm text-[#6b608a] dark:text-[#a097bd]">Encrypted backend storage infrastructure</p>
+                                            <h4 className="font-bold text-[#131118] dark:text-white text-base">Cloud Infrastructure</h4>
+                                            <p className="text-sm text-[#6b608a] dark:text-[#a097bd]">Secure database storage and backup configurations</p>
                                         </div>
                                     </div>
                                 </div>
                                 <p className="mt-4 text-xs text-[#6b608a] dark:text-[#a097bd] italic">
-                                    These providers only host the ciphertext of your Vault. They do not have access to keys to decrypt your items.
+                                    Third-party hosts do not use your scan history or profile media for any other purposes, securing access under strict database rules.
                                 </p>
                             </div>
                         )
                     },
                     {
                         id: "security",
-                        title: "6. Zero-Knowledge Encryption Security",
+                        title: "6. Cloud Database & Account Security",
                         content: (
                             <div className="space-y-4">
                                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                    Password Manager encrypts all passwords and identity data on your local device before transmitting them to our servers. Only you possess the Master Password required to decrypt this data. You are solely responsible for ensuring your local devices remain secure from malware or physical breaches.
+                                    QR Scanner secures your scan history and profile data by linking database records directly to your authenticated user account. All data transmissions are encrypted in transit. You are responsible for keeping your login credentials confidential and ensuring the physical and software security of your local device.
                                 </p>
                             </div>
                         )
@@ -150,7 +154,7 @@ export default function PrivacyContent() {
                         title: "7. Data Retention Policy",
                         content: (
                             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                Encrypted personal data is retained while the account is active. Soft-deleted Trash items may be permanently cleared manually or via routine local schedules. 
+                                Scanned items, profile details, and account metadata are retained in our database while your account is active. You can clear your scanned log history at any time or request account deletion to remove all data permanently.
                             </p>
                         )
                     },
@@ -159,7 +163,7 @@ export default function PrivacyContent() {
                         title: "8. International Data Transfers",
                         content: (
                             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                Data may be processed by third-party services located in other jurisdictions, governed by secure transmission standards.
+                                Data may be processed by third-party database servers located in other jurisdictions, governed by secure transmission standards.
                             </p>
                         )
                     },
@@ -173,9 +177,9 @@ export default function PrivacyContent() {
                                 </p>
                                 <div className="space-y-3">
                                     {[
-                                        "Access to non-vault account data",
+                                        "Access to account profile and scan history data",
                                         "Correction of account details",
-                                        "Complete deletion of Remote Vault",
+                                        "Complete deletion of scan history database records",
                                         "Account termination"
                                     ].map((right, i) => (
                                         <motion.div key={i} whileHover={{ x: 5 }} className="flex items-center justify-between p-4 rounded-lg bg-[#f1f0f5] dark:bg-white/5 cursor-pointer">
@@ -192,10 +196,10 @@ export default function PrivacyContent() {
                     },
                     {
                         id: "cookies",
-                        title: "10. Cookies & Technical Information",
+                        title: "10. Technical Settings & Storage",
                         content: (
                             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                The platform may use essential session mechanisms necessary for biometric authentication, session timeouts, and cross-device sync.
+                                The platform may use essential session tokens and local storage necessary for account persistence, session timeout, and database sync.
                             </p>
                         )
                     },

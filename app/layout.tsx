@@ -8,8 +8,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Password Manager",
-  description: "Secure Password and Identity Manager",
+  title: "QR Scanner - Scan & Generate QR & Barcodes",
+  description: "Easily scan, read, and generate QR codes and barcodes. Securely save your scan history and customize your profile.",
 };
 
 export default function RootLayout({

@@ -12,12 +12,12 @@ export default function Download() {
                     viewport={{ once: true }}
                     className="text-3xl font-bold text-[#131118] dark:text-white mb-12"
                 >
-                    Download Password Manager App
+                    Download QR Scanner App
                 </motion.h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                     {[
                         { icon: "apple", label: "Download on the", store: "App Store", link: "https://apps.apple.com/app/id6760476702" },
-                        { icon: "play_arrow", label: "Get it on", store: "Google Play", link: "https://play.google.com/store/apps/details?id=com.savebit" }
+                        { icon: "play_arrow", label: "Get it on", store: "Google Play", link: "https://play.google.com/store/apps/details?id=com.qrscanner" }
                     ].map((card, index) => (
                         <motion.a
                             href={card.link}
