@@ -15,12 +15,11 @@ export default function PrivacyContent() {
                     Privacy Policy
                 </h1>
                 <p className="text-[#6b608a] dark:text-[#a097bd] text-lg font-normal leading-normal mb-6">
-                    Transparent information on how we handle your data, permissions, and protect your
-                    privacy in our utility ecosystem.
+                    We respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, store, and safeguard your data when you use our app.
                 </p>
                 <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 text-sm">
                     <span className="text-gray-500 dark:text-gray-400">
-                        Last Updated: June 13, 2026
+                        Last Updated: June 24, 2026
                     </span>
                     <span className="hidden sm:inline text-gray-300">|</span>
                     <a
@@ -32,202 +31,323 @@ export default function PrivacyContent() {
                     </a>
                 </div>
             </motion.header>
- 
+
             <div className="space-y-12">
                 {[
                     {
-                        id: "introduction",
-                        title: "1. Introduction",
+                        id: "information-collect",
+                        title: "1. Information We Collect",
                         content: (
-                            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                This Privacy Policy outlines how QR Scanner collects, processes, stores, and protects personal data, scan history, camera inputs, and library assets.
-                            </p>
+                            <div className="space-y-6">
+                                <div>
+                                    <h3 className="text-lg font-bold text-[#131118] dark:text-white mb-3">Account Information</h3>
+                                    <ul className="space-y-2 text-gray-600 dark:text-gray-400">
+                                        <li className="flex items-start gap-2.5">
+                                            <span className="material-symbols-outlined text-primary text-lg mt-0.5">badge</span>
+                                            <span>Full name.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2.5">
+                                            <span className="material-symbols-outlined text-primary text-lg mt-0.5">mail</span>
+                                            <span>Email address.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2.5">
+                                            <span className="material-symbols-outlined text-primary text-lg mt-0.5">vpn_key</span>
+                                            <span>Authentication data managed through secure third-party services.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div className="border-t border-gray-100 dark:border-gray-800 pt-6">
+                                    <h3 className="text-lg font-bold text-[#131118] dark:text-white mb-3">Permissions</h3>
+                                    <div className="grid md:grid-cols-2 gap-4">
+                                        <div className="p-4 rounded-xl bg-white dark:bg-[#1c182b] border border-[#f1f0f5] dark:border-[#2a2636]">
+                                            <div className="flex items-center gap-2 mb-2">
+                                                <span className="material-symbols-outlined text-primary">photo_camera</span>
+                                                <h4 className="font-semibold text-[#131118] dark:text-white">Camera Access</h4>
+                                            </div>
+                                            <ul className="space-y-1.5 text-sm text-gray-600 dark:text-gray-400 mb-2">
+                                                <li>• Scan QR codes and barcodes.</li>
+                                                <li>• Enable real-time code detection.</li>
+                                            </ul>
+                                            <p className="text-xs text-gray-500 dark:text-gray-400 italic">
+                                                Camera data is processed locally on your device. We do not record, store, or transmit camera footage.
+                                            </p>
+                                        </div>
+                                        <div className="p-4 rounded-xl bg-white dark:bg-[#1c182b] border border-[#f1f0f5] dark:border-[#2a2636]">
+                                            <div className="flex items-center gap-2 mb-2">
+                                                <span className="material-symbols-outlined text-primary">photo_library</span>
+                                                <h4 className="font-semibold text-[#131118] dark:text-white">Photo Library Access</h4>
+                                            </div>
+                                            <ul className="space-y-1.5 text-sm text-gray-600 dark:text-gray-400 mb-2">
+                                                <li>• Upload a profile picture.</li>
+                                                <li>• Scan codes from selected images.</li>
+                                            </ul>
+                                            <p className="text-xs text-gray-500 dark:text-gray-400 italic">
+                                                Photos are accessed only when you choose to use these features.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="border-t border-gray-100 dark:border-gray-800 pt-6">
+                                    <h3 className="text-lg font-bold text-[#131118] dark:text-white mb-3">App Data</h3>
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-600 dark:text-gray-400">
+                                        {[
+                                            "QR code generation history",
+                                            "Scan history",
+                                            "Profile image",
+                                            "App preferences and settings"
+                                        ].map((item, idx) => (
+                                            <div key={idx} className="flex items-center gap-2 p-3 rounded-lg bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-transparent">
+                                                <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
+                                                <span>{item}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
                         )
                     },
                     {
-                        id: "information-collected",
-                        title: "2. Information & Permissions Collected",
+                        id: "use-information",
+                        title: "2. How We Use Your Information",
                         content: (
-                            <>
-                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-                                    We collect and request access to:
-                                </p>
-                                <ul className="space-y-3 text-gray-600 dark:text-gray-400">
-                                    <li className="flex gap-3">
-                                        <span className="material-symbols-outlined text-primary mt-0.5">check_circle</span>
-                                        <span>Full Name & Email Address (via secure Authentication)</span>
-                                    </li>
-                                    <li className="flex gap-3">
-                                        <span className="material-symbols-outlined text-primary mt-0.5">check_circle</span>
-                                        <span>Camera Access (strictly requested to scan QR codes and barcodes in real-time)</span>
-                                    </li>
-                                    <li className="flex gap-3">
-                                        <span className="material-symbols-outlined text-primary mt-0.5">check_circle</span>
-                                        <span>Photo Library Access (strictly requested to let you select and upload a custom profile picture)</span>
-                                    </li>
-                                    <li className="flex gap-3">
-                                        <span className="material-symbols-outlined text-primary mt-0.5">check_circle</span>
-                                        <span>Scan & Generation History (saved in the database to sync across your devices)</span>
-                                    </li>
-                                </ul>
-                                <p className="mt-4 text-gray-600 dark:text-gray-400 leading-relaxed italic font-bold">
-                                    We DO NOT process or stream camera footage to our servers; all frame analysis for code reading is done locally on your device.
-                                </p>
-                            </>
-                        )
-                    },
-                    {
-                        id: "purpose",
-                        title: "3. Purpose of Data Processing",
-                        content: (
-                            <>
-                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-                                    Your data is used to:
+                            <div className="space-y-4">
+                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-2">
+                                    We use your information to:
                                 </p>
                                 <div className="grid md:grid-cols-2 gap-4">
                                     {[
-                                        "Create and manage user accounts",
-                                        "Authenticate users via Firebase",
-                                        "Sync scan and generation history to the cloud",
-                                        "Store and display your selected profile photo",
-                                        "Support code detection features on-device",
-                                        "Provide secure database backup"
+                                        { text: "Create and manage accounts.", icon: "manage_accounts" },
+                                        { text: "Authenticate users securely.", icon: "security" },
+                                        { text: "Provide QR scanning and generation features.", icon: "qr_code_scanner" },
+                                        { text: "Sync scan and generation history across devices.", icon: "sync" },
+                                        { text: "Store profile pictures.", icon: "account_circle" },
+                                        { text: "Maintain security and reliability.", icon: "shield" },
+                                        { text: "Provide customer support.", icon: "support_agent" },
+                                        { text: "Improve app performance and user experience.", icon: "speed" }
                                     ].map((item, i) => (
-                                        <div key={i} className="p-4 rounded-xl bg-white dark:bg-[#1c182b] border border-[#f1f0f5] dark:border-[#2a2636]">
-                                            <p className="text-sm font-medium text-[#131118] dark:text-white">{item}</p>
+                                        <div key={i} className="flex items-start gap-3 p-4 rounded-xl bg-white dark:bg-[#1c182b] border border-[#f1f0f5] dark:border-[#2a2636]">
+                                            <span className="material-symbols-outlined text-primary mt-0.5">{item.icon}</span>
+                                            <p className="text-sm font-medium text-[#131118] dark:text-white leading-snug">{item.text}</p>
                                         </div>
                                     ))}
                                 </div>
-                            </>
+                            </div>
                         )
                     },
                     {
                         id: "legal-basis",
-                        title: "4. Legal Basis for Processing",
+                        title: "3. Legal Basis for Processing",
                         content: (
-                            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                Data is processed based on user consent (such as granting camera/library permissions), service necessity, and our legitimate interests in providing secure scan log storage.
-                            </p>
+                            <div className="space-y-3">
+                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-2">
+                                    We process data based on:
+                                </p>
+                                <ul className="space-y-3 text-gray-600 dark:text-gray-400">
+                                    {[
+                                        "Your consent.",
+                                        "Service requirements.",
+                                        "Legitimate interests such as security and service improvement.",
+                                        "Compliance with legal obligations."
+                                    ].map((item, idx) => (
+                                        <li key={idx} className="flex gap-3 items-start">
+                                            <span className="material-symbols-outlined text-primary text-lg mt-0.5">check_circle</span>
+                                            <span>{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
                         )
                     },
                     {
                         id: "third-party",
-                        title: "5. Third-Party Data Processors",
+                        title: "4. Third-Party Services",
                         content: (
-                            <div className="bg-primary/5 rounded-xl p-6 border border-primary/10">
-                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">We use:</p>
-                                <div className="space-y-4">
-                                    <div className="flex items-start gap-4">
-                                        <span className="material-symbols-outlined text-primary">security</span>
+                            <div className="space-y-6">
+                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-2">
+                                    We may use trusted providers, including:
+                                </p>
+                                <div className="grid md:grid-cols-2 gap-4">
+                                    <div className="bg-primary/5 rounded-xl p-5 border border-primary/10 flex flex-col justify-between">
                                         <div>
-                                            <h4 className="font-bold text-[#131118] dark:text-white text-base">Firebase</h4>
-                                            <p className="text-sm text-[#6b608a] dark:text-[#a097bd]">Authentication, Firestore database, and Cloud Storage for profile files</p>
+                                            <div className="flex items-center gap-2 mb-3">
+                                                <span className="material-symbols-outlined text-primary">cloud_done</span>
+                                                <h4 className="font-bold text-[#131118] dark:text-white text-base">Firebase</h4>
+                                            </div>
+                                            <ul className="space-y-1.5 text-sm text-[#6b608a] dark:text-[#a097bd]">
+                                                <li>• Authentication.</li>
+                                                <li>• Cloud Firestore Database.</li>
+                                                <li>• Cloud Storage.</li>
+                                                <li>• Analytics and performance monitoring (if enabled).</li>
+                                            </ul>
                                         </div>
                                     </div>
-                                    <div className="flex items-start gap-4">
-                                        <span className="material-symbols-outlined text-primary">cloud</span>
+                                    <div className="bg-primary/5 rounded-xl p-5 border border-primary/10 flex flex-col justify-between">
                                         <div>
-                                            <h4 className="font-bold text-[#131118] dark:text-white text-base">Cloud Infrastructure</h4>
-                                            <p className="text-sm text-[#6b608a] dark:text-[#a097bd]">Secure database storage and backup configurations</p>
+                                            <div className="flex items-center gap-2 mb-3">
+                                                <span className="material-symbols-outlined text-primary">dns</span>
+                                                <h4 className="font-bold text-[#131118] dark:text-white text-base">Cloud Infrastructure Providers</h4>
+                                            </div>
+                                            <ul className="space-y-1.5 text-sm text-[#6b608a] dark:text-[#a097bd]">
+                                                <li>• Data storage.</li>
+                                                <li>• Backups.</li>
+                                                <li>• Security and maintenance.</li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
-                                <p className="mt-4 text-xs text-[#6b608a] dark:text-[#a097bd] italic">
-                                    Third-party hosts do not use your scan history or profile media for any other purposes, securing access under strict database rules.
+                                <p className="text-sm text-gray-600 dark:text-gray-400 italic">
+                                    These providers process data only as necessary to deliver our services.
                                 </p>
                             </div>
                         )
                     },
                     {
-                        id: "security",
-                        title: "6. Cloud Database & Account Security",
+                        id: "data-security",
+                        title: "5. Data Security",
                         content: (
                             <div className="space-y-4">
                                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                    QR Scanner secures your scan history and profile data by linking database records directly to your authenticated user account. All data transmissions are encrypted in transit. You are responsible for keeping your login credentials confidential and ensuring the physical and software security of your local device.
+                                    We use industry-standard security measures, including:
+                                </p>
+                                <ul className="grid sm:grid-cols-2 gap-3 text-gray-600 dark:text-gray-400">
+                                    {[
+                                        "Encrypted data transmission.",
+                                        "Secure authentication.",
+                                        "Database access controls.",
+                                        "Security monitoring."
+                                    ].map((item, idx) => (
+                                        <li key={idx} className="flex gap-2.5 items-center">
+                                            <span className="material-symbols-outlined text-primary text-lg">lock</span>
+                                            <span>{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                                <p className="text-sm text-gray-500 dark:text-gray-400 italic mt-2 border-l-2 border-primary/20 pl-3">
+                                    While we take reasonable steps to protect your data, no method of transmission or storage is completely secure.
                                 </p>
                             </div>
                         )
                     },
                     {
-                        id: "retention",
-                        title: "7. Data Retention Policy",
+                        id: "data-retention",
+                        title: "6. Data Retention",
                         content: (
-                            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                Scanned items, profile details, and account metadata are retained in our database while your account is active. You can clear your scanned log history at any time or request account deletion to remove all data permanently.
-                            </p>
+                            <div className="space-y-4">
+                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                                    We retain data only as long as necessary:
+                                </p>
+                                <ul className="space-y-2.5 text-gray-600 dark:text-gray-400">
+                                    <li className="flex gap-2.5 items-start">
+                                        <span className="material-symbols-outlined text-primary text-lg mt-0.5">hourglass_empty</span>
+                                        <span><strong>Account information:</strong> remains while your account is active.</span>
+                                    </li>
+                                    <li className="flex gap-2.5 items-start">
+                                        <span className="material-symbols-outlined text-primary text-lg mt-0.5">history</span>
+                                        <span><strong>Scan and generation history:</strong> remains until deleted by you or upon account deletion.</span>
+                                    </li>
+                                    <li className="flex gap-2.5 items-start">
+                                        <span className="material-symbols-outlined text-primary text-lg mt-0.5">image</span>
+                                        <span><strong>Profile images:</strong> remain until removed or replaced.</span>
+                                    </li>
+                                </ul>
+                                <p className="text-sm text-primary font-medium mt-2">
+                                    You may request account deletion at any time.
+                                </p>
+                            </div>
                         )
                     },
                     {
                         id: "international-transfers",
-                        title: "8. International Data Transfers",
+                        title: "7. International Data Transfers",
                         content: (
                             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                Data may be processed by third-party database servers located in other jurisdictions, governed by secure transmission standards.
+                                Your information may be stored or processed on servers located in other countries. Appropriate safeguards are applied to protect your data.
                             </p>
                         )
                     },
                     {
-                        id: "user-rights",
-                        title: "9. User Rights",
+                        id: "your-rights",
+                        title: "8. Your Rights",
                         content: (
-                            <>
-                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-                                    Users may request:
+                            <div className="space-y-4">
+                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-2">
+                                    Subject to applicable laws, you may:
                                 </p>
-                                <div className="space-y-3">
+                                <div className="grid sm:grid-cols-2 gap-3">
                                     {[
-                                        "Access to account profile and scan history data",
-                                        "Correction of account details",
-                                        "Complete deletion of scan history database records",
-                                        "Account termination"
+                                        "Access your personal data.",
+                                        "Correct inaccurate information.",
+                                        "Delete your personal data.",
+                                        "Remove scan and generation history.",
+                                        "Withdraw consent where applicable.",
+                                        "Request account deletion."
                                     ].map((right, i) => (
-                                        <motion.div key={i} whileHover={{ x: 5 }} className="flex items-center justify-between p-4 rounded-lg bg-[#f1f0f5] dark:bg-white/5 cursor-pointer">
-                                            <span className="font-medium text-[#131118] dark:text-white">{right}</span>
-                                            <span className="material-symbols-outlined text-[#6b608a]">chevron_right</span>
+                                        <motion.div key={i} whileHover={{ x: 5 }} className="flex items-center justify-between p-3.5 rounded-lg bg-[#f1f0f5] dark:bg-white/5 border border-transparent dark:border-white/5">
+                                            <span className="font-medium text-[#131118] dark:text-white text-sm">{right}</span>
+                                            <span className="material-symbols-outlined text-[#6b608a] text-sm">chevron_right</span>
                                         </motion.div>
                                     ))}
                                 </div>
-                                <p className="mt-6 text-[#6b608a] dark:text-[#a097bd] italic text-sm text-center">
-                                    Requests should be sent via email.
+                                <p className="mt-4 text-[#6b608a] dark:text-[#a097bd] italic text-sm text-center">
+                                    Requests can be made via email.
                                 </p>
-                            </>
+                            </div>
                         )
                     },
                     {
-                        id: "cookies",
-                        title: "10. Technical Settings & Storage",
+                        id: "local-storage",
+                        title: "9. Local Storage",
                         content: (
-                            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                The platform may use essential session tokens and local storage necessary for account persistence, session timeout, and database sync.
-                            </p>
+                            <div className="space-y-4">
+                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                                    The app may use local storage, cached files, and session tokens for:
+                                </p>
+                                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm text-gray-600 dark:text-gray-400">
+                                    {[
+                                        "Authentication",
+                                        "Account persistence",
+                                        "Saving preferences",
+                                        "Performance optimization",
+                                        "Data synchronization"
+                                    ].map((item, idx) => (
+                                        <div key={idx} className="p-3 rounded-lg bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-transparent text-center">
+                                            <span className="font-medium">{item}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                                <p className="text-sm text-gray-600 dark:text-gray-400 italic">
+                                    These technologies are used only for essential app functionality.
+                                </p>
+                            </div>
                         )
                     },
                     {
-                        id: "childrens-privacy",
-                        title: "11. Children's Privacy",
+                        id: "children-privacy",
+                        title: "10. Children's Privacy",
                         content: (
                             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                We do not knowingly collect information from children under 13.
+                                Our app is not intended for children under 13 years of age. We do not knowingly collect personal information from children.
                             </p>
                         )
                     },
                     {
                         id: "policy-updates",
-                        title: "12. Policy Updates",
+                        title: "11. Policy Updates",
                         content: (
                             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                We reserve the right to update this Privacy Policy. Changes become effective upon publication.
+                                We may update this Privacy Policy from time to time. Changes become effective upon publication within the app.
                             </p>
                         )
                     },
                     {
-                        id: "contact",
-                        title: "13. Contact Information",
+                        id: "contact-us",
+                        title: "12. Contact Us",
                         content: (
                             <div className="text-center p-8 rounded-2xl bg-primary/5 border border-primary/10">
-                                <h4 className="text-xl font-bold text-[#131118] dark:text-white mb-2">Questions or Data Requests?</h4>
-                                <p className="text-[#6b608a] dark:text-[#a097bd] mb-6">For privacy concerns or data requests, please contact us at:</p>
+                                <h4 className="text-xl font-bold text-[#131118] dark:text-white mb-2">Questions or Privacy Requests?</h4>
+                                <p className="text-[#6b608a] dark:text-[#a097bd] mb-6">For privacy-related questions or requests, contact:</p>
                                 <a
                                     href="mailto:supportappnaya@gmail.com"
                                     className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-xl font-semibold hover:opacity-90 transition-opacity"
