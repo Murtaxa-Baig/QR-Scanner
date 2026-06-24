@@ -6,7 +6,10 @@ export default function ContactHero() {
                     Contact Us
                 </h1>
                 <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-                    We&apos;re here to help you get the most out of our AI tools. Reach out to us through the form below or via our direct contact channels.
+                    We&apos;re here to help you get the most out of our AI tools. Reach out to us through the form below or email us directly at{" "}
+                    <a href="mailto:supportappnaya@gmail.com" className="text-primary hover:underline font-semibold">
+                        supportappnaya@gmail.com
+                    </a>.
                 </p>
             </div>
         </section>
