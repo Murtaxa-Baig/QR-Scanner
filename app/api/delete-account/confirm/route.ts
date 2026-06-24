@@ -3,11 +3,11 @@ import { NextResponse } from "next/server";
 export async function POST(request: Request) {
     try {
         const body = await request.json();
-        const { email, reason } = body || {};
+        const { token, secretCode } = body || {};
 
-        if (!email || !reason) {
+        if (!token || !secretCode) {
             return NextResponse.json(
-                { error: "Missing required fields." },
+                { error: "Missing required fields (token, secretCode)." },
                 { status: 400 }
             );
         }
@@ -20,14 +20,14 @@ export async function POST(request: Request) {
         } catch {
             baseUrl = envUrl.replace(/\/api\/v1\/web\/delete-account\/?$/, "");
         }
-        const apiUrl = `${baseUrl}/api/v1/users/web-delete-request`;
+        const apiUrl = `${baseUrl}/api/v1/users/web-delete-confirm`;
 
         const response = await fetch(apiUrl, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({ email, reason }),
+            body: JSON.stringify({ token, secretCode }),
         });
 
         // Some APIs might return non-JSON responses on error
@@ -40,7 +40,7 @@ export async function POST(request: Request) {
 
         return NextResponse.json(data, { status: response.status });
     } catch (error: any) {
-        console.error("DELETE_ACCOUNT_PROXY_ERROR:", error);
+        console.error("DELETE_ACCOUNT_CONFIRM_PROXY_ERROR:", error);
         return NextResponse.json(
             { error: error?.message || "Internal server error" },
             { status: 500 }
