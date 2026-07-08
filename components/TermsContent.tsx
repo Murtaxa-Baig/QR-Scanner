@@ -35,7 +35,7 @@ export default function TermsContent() {
             title: "1. Acceptance of Agreement",
             content: (
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                By accessing or using QR Code Scanner & Generator (“Service”),
+                By accessing or using QR Code Generator (“Service”),
                 you agree to be legally bound by these Terms & Conditions. If
                 you disagree with any provision, you must immediately cease use
                 of the Service.
@@ -52,7 +52,7 @@ export default function TermsContent() {
                     “Platform”:
                   </span>
                   <span>
-                    Refers to the QR Code Scanner & Generator website and
+                    Refers to the QR Code Generator website and
                     applications.
                   </span>
                 </li>
@@ -91,13 +91,13 @@ export default function TermsContent() {
             content: (
               <>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-                  QR Code Scanner & Generator provides barcode and QR code
+                  QR Code Generator provides barcode and QR code
                   utilities, including real-time code scanning, custom code
                   generation, profile photo updating, and database syncing.
                 </p>
                 <div className="p-4 rounded-xl bg-primary/5 border border-primary/10">
                   <p className="text-sm text-gray-600 dark:text-gray-400 italic">
-                    QR Code Scanner & Generator employs Firebase secure database
+                    QR Code Generator employs Firebase secure database
                     structure. Scan log histories and profiles are securely
                     synced to our cloud databases under your authenticated
                     account.
@@ -162,7 +162,7 @@ export default function TermsContent() {
                     warning
                   </span>
                   <span>
-                    QR Code Scanner & Generator is not liable for data loss due
+                    QR Code Generator is not liable for data loss due
                     to lapsed subscription backups (if applicable).
                   </span>
                 </li>
@@ -221,7 +221,7 @@ export default function TermsContent() {
               <div className="space-y-4 text-gray-600 dark:text-gray-400">
                 <p className="leading-relaxed">
                   All branding, design, structure, and software remain the
-                  exclusive property of QR Code Scanner & Generator. Your Scan
+                  exclusive property of QR Code Generator. Your Scan
                   History remains exclusively yours.
                 </p>
               </div>
@@ -237,7 +237,7 @@ export default function TermsContent() {
                   profile photos submitted to your account.
                 </li>
                 <li>
-                  • QR Code Scanner & Generator cannot review or moderate your
+                  • QR Code Generator cannot review or moderate your
                   private scan history logs due to user privacy controls.
                 </li>
               </ul>

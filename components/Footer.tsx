@@ -10,7 +10,7 @@ export default function Footer() {
             <div className="flex items-center gap-2 mb-4">
               <Logo size={36} />
               <span className="text-xl font-bold">
-                QR Code Scanner & Generator
+                QR Code Generator
               </span>
             </div>
             <p className="text-gray-400 text-sm max-w-xs">

@@ -21,7 +21,7 @@ export default function AboutSection() {
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mb-10 text-lg leading-relaxed max-w-2xl mx-auto">
             Manage your scanned lists and customized codes effortlessly with
-            intuitive utilities built right into QR Code Scanner & Generator.
+            intuitive utilities built right into QR Code Generator.
             View, sort, delete, and export your history whenever you need them.
           </p>
           <ul className="space-y-4 max-w-xl mx-auto text-left">
