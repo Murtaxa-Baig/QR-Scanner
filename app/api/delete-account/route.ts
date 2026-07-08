@@ -13,14 +13,21 @@ export async function POST(request: Request) {
         }
 
         const envUrl = process.env.NEXT_PUBLIC_BASE_URL || "";
-        let baseUrl = envUrl;
-        try {
-            const parsedUrl = new URL(envUrl);
-            baseUrl = parsedUrl.origin;
-        } catch {
-            baseUrl = envUrl.replace(/\/api\/v1\/web\/delete-account\/?$/, "");
+        // Clean leading/trailing quotes and trailing slashes
+        const cleanUrl = envUrl.trim().replace(/^['"]|['"]$/g, "").replace(/\/+$/, "");
+
+        let apiUrl: string;
+        if (cleanUrl.endsWith("/api/v1/users")) {
+            apiUrl = `${cleanUrl}/web-delete-request`;
+        } else {
+            try {
+                const parsedUrl = new URL(cleanUrl);
+                apiUrl = `${parsedUrl.origin}/api/v1/users/web-delete-request`;
+            } catch {
+                const baseUrl = cleanUrl.replace(/\/api\/v1\/web\/delete-account\/?$/, "");
+                apiUrl = `${baseUrl}/api/v1/users/web-delete-request`;
+            }
         }
-        const apiUrl = `${baseUrl}/api/v1/users/web-delete-request`;
 
         const response = await fetch(apiUrl, {
             method: "POST",
