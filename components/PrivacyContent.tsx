@@ -59,33 +59,151 @@ export default function PrivacyContent() {
 
                                 <div className="border-t border-gray-100 dark:border-gray-800 pt-6">
                                     <h3 className="text-lg font-bold text-[#131118] dark:text-white mb-3">Permissions</h3>
-                                    <div className="grid md:grid-cols-2 gap-4">
-                                        <div className="p-4 rounded-xl bg-white dark:bg-[#1c182b] border border-[#f1f0f5] dark:border-[#2a2636]">
-                                            <div className="flex items-center gap-2 mb-2">
-                                                <span className="material-symbols-outlined text-primary">photo_camera</span>
-                                                <h4 className="font-semibold text-[#131118] dark:text-white">Camera Access</h4>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                        {/* Camera Access */}
+                                        <motion.div
+                                            whileHover={{ y: -4, scale: 1.01 }}
+                                            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                                            className="p-5 rounded-2xl bg-white dark:bg-[#1c182b] border border-[#f1f0f5] dark:border-[#2a2636] shadow-sm hover:shadow-md hover:border-primary/20 dark:hover:border-primary/30 transition-all duration-300 flex flex-col justify-between"
+                                        >
+                                            <div>
+                                                <div className="flex items-center gap-3 mb-3">
+                                                    <div className="p-2 rounded-xl bg-primary/10 dark:bg-primary/20 text-primary flex items-center justify-center">
+                                                        <span className="material-symbols-outlined">photo_camera</span>
+                                                    </div>
+                                                    <h4 className="font-bold text-base text-[#131118] dark:text-white">Camera Access</h4>
+                                                </div>
+                                                <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400 mb-4">
+                                                    <li className="flex items-start gap-2">
+                                                        <span className="text-primary font-bold">•</span>
+                                                        <span>Scan QR codes and barcodes.</span>
+                                                    </li>
+                                                    <li className="flex items-start gap-2">
+                                                        <span className="text-primary font-bold">•</span>
+                                                        <span>Enable real-time code detection.</span>
+                                                    </li>
+                                                </ul>
                                             </div>
-                                            <ul className="space-y-1.5 text-sm text-gray-600 dark:text-gray-400 mb-2">
-                                                <li>• Scan QR codes and barcodes.</li>
-                                                <li>• Enable real-time code detection.</li>
-                                            </ul>
-                                            <p className="text-xs text-gray-500 dark:text-gray-400 italic">
+                                            <p className="text-xs text-gray-500 dark:text-gray-400 italic border-t border-gray-50 dark:border-gray-800/50 pt-3">
                                                 Camera data is processed locally on your device. We do not record, store, or transmit camera footage.
                                             </p>
-                                        </div>
-                                        <div className="p-4 rounded-xl bg-white dark:bg-[#1c182b] border border-[#f1f0f5] dark:border-[#2a2636]">
-                                            <div className="flex items-center gap-2 mb-2">
-                                                <span className="material-symbols-outlined text-primary">photo_library</span>
-                                                <h4 className="font-semibold text-[#131118] dark:text-white">Photo Library Access</h4>
+                                        </motion.div>
+
+                                        {/* Gallery Access */}
+                                        <motion.div
+                                            whileHover={{ y: -4, scale: 1.01 }}
+                                            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                                            className="p-5 rounded-2xl bg-white dark:bg-[#1c182b] border border-[#f1f0f5] dark:border-[#2a2636] shadow-sm hover:shadow-md hover:border-primary/20 dark:hover:border-primary/30 transition-all duration-300 flex flex-col justify-between"
+                                        >
+                                            <div>
+                                                <div className="flex items-center gap-3 mb-3">
+                                                    <div className="p-2 rounded-xl bg-primary/10 dark:bg-primary/20 text-primary flex items-center justify-center">
+                                                        <span className="material-symbols-outlined">photo_library</span>
+                                                    </div>
+                                                    <h4 className="font-bold text-base text-[#131118] dark:text-white">Gallery Access</h4>
+                                                </div>
+                                                <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400 mb-4">
+                                                    <li className="flex items-start gap-2">
+                                                        <span className="text-primary font-bold">•</span>
+                                                        <span>Upload a profile picture.</span>
+                                                    </li>
+                                                    <li className="flex items-start gap-2">
+                                                        <span className="text-primary font-bold">•</span>
+                                                        <span>Scan QR/barcodes from photos.</span>
+                                                    </li>
+                                                </ul>
                                             </div>
-                                            <ul className="space-y-1.5 text-sm text-gray-600 dark:text-gray-400 mb-2">
-                                                <li>• Upload a profile picture.</li>
-                                                <li>• Scan codes from selected images.</li>
-                                            </ul>
-                                            <p className="text-xs text-gray-500 dark:text-gray-400 italic">
-                                                Photos are accessed only when you choose to use these features.
+                                            <p className="text-xs text-gray-500 dark:text-gray-400 italic border-t border-gray-50 dark:border-gray-800/50 pt-3">
+                                                Photos are accessed only when you choose to select them for scanning or profile updates.
                                             </p>
-                                        </div>
+                                        </motion.div>
+
+                                        {/* Location Access */}
+                                        <motion.div
+                                            whileHover={{ y: -4, scale: 1.01 }}
+                                            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                                            className="p-5 rounded-2xl bg-white dark:bg-[#1c182b] border border-[#f1f0f5] dark:border-[#2a2636] shadow-sm hover:shadow-md hover:border-primary/20 dark:hover:border-primary/30 transition-all duration-300 flex flex-col justify-between"
+                                        >
+                                            <div>
+                                                <div className="flex items-center gap-3 mb-3">
+                                                    <div className="p-2 rounded-xl bg-primary/10 dark:bg-primary/20 text-primary flex items-center justify-center">
+                                                        <span className="material-symbols-outlined">location_on</span>
+                                                    </div>
+                                                    <h4 className="font-bold text-base text-[#131118] dark:text-white">Location Access</h4>
+                                                </div>
+                                                <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400 mb-4">
+                                                    <li className="flex items-start gap-2">
+                                                        <span className="text-primary font-bold">•</span>
+                                                        <span>Customize QR standards and search.</span>
+                                                    </li>
+                                                    <li className="flex items-start gap-2">
+                                                        <span className="text-primary font-bold">•</span>
+                                                        <span>Identify region for local features.</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <p className="text-xs text-gray-500 dark:text-gray-400 italic border-t border-gray-50 dark:border-gray-800/50 pt-3">
+                                                Location information is processed on-device for regional purposes and is not tracked continuously.
+                                            </p>
+                                        </motion.div>
+
+                                        {/* Billing Access */}
+                                        <motion.div
+                                            whileHover={{ y: -4, scale: 1.01 }}
+                                            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                                            className="p-5 rounded-2xl bg-white dark:bg-[#1c182b] border border-[#f1f0f5] dark:border-[#2a2636] shadow-sm hover:shadow-md hover:border-primary/20 dark:hover:border-primary/30 transition-all duration-300 flex flex-col justify-between"
+                                        >
+                                            <div>
+                                                <div className="flex items-center gap-3 mb-3">
+                                                    <div className="p-2 rounded-xl bg-primary/10 dark:bg-primary/20 text-primary flex items-center justify-center">
+                                                        <span className="material-symbols-outlined">payments</span>
+                                                    </div>
+                                                    <h4 className="font-bold text-base text-[#131118] dark:text-white">Billing Access</h4>
+                                                </div>
+                                                <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400 mb-4">
+                                                    <li className="flex items-start gap-2">
+                                                        <span className="text-primary font-bold">•</span>
+                                                        <span>Handle In-App Purchases (IAP).</span>
+                                                    </li>
+                                                    <li className="flex items-start gap-2">
+                                                        <span className="text-primary font-bold">•</span>
+                                                        <span>Manage premium subscriptions.</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <p className="text-xs text-gray-500 dark:text-gray-400 italic border-t border-gray-50 dark:border-gray-800/50 pt-3">
+                                                Transactions are processed securely via the official Google Play / Apple App Store platforms.
+                                            </p>
+                                        </motion.div>
+
+                                        {/* Notification Access */}
+                                        <motion.div
+                                            whileHover={{ y: -4, scale: 1.01 }}
+                                            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                                            className="p-5 rounded-2xl bg-white dark:bg-[#1c182b] border border-[#f1f0f5] dark:border-[#2a2636] shadow-sm hover:shadow-md hover:border-primary/20 dark:hover:border-primary/30 transition-all duration-300 flex flex-col justify-between md:col-span-2 lg:col-span-1"
+                                        >
+                                            <div>
+                                                <div className="flex items-center gap-3 mb-3">
+                                                    <div className="p-2 rounded-xl bg-primary/10 dark:bg-primary/20 text-primary flex items-center justify-center">
+                                                        <span className="material-symbols-outlined">notifications</span>
+                                                    </div>
+                                                    <h4 className="font-bold text-base text-[#131118] dark:text-white">Notifications</h4>
+                                                </div>
+                                                <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400 mb-4">
+                                                    <li className="flex items-start gap-2">
+                                                        <span className="text-primary font-bold">•</span>
+                                                        <span>Send updates and scan completions.</span>
+                                                    </li>
+                                                    <li className="flex items-start gap-2">
+                                                        <span className="text-primary font-bold">•</span>
+                                                        <span>Deliver random feature reminders.</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <p className="text-xs text-gray-500 dark:text-gray-400 italic border-t border-gray-50 dark:border-gray-800/50 pt-3">
+                                                You can configure, enable, or completely disable notifications inside your device settings.
+                                            </p>
+                                        </motion.div>
                                     </div>
                                 </div>
 
@@ -358,7 +476,7 @@ export default function PrivacyContent() {
                             </div>
                         )
                     }
-                ].map((section, index) => (
+                ].map((section) => (
                     <motion.section
                         key={section.id}
                         id={section.id}
