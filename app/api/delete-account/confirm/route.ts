@@ -12,7 +12,7 @@ export async function POST(request: Request) {
             );
         }
 
-        const envUrl = process.env.NEXT_PUBLIC_BASE_URL || "";
+        const envUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://qr-scanner-backend-production-f219.up.railway.app";
         // Clean leading/trailing quotes and trailing slashes
         const cleanUrl = envUrl.trim().replace(/^['"]|['"]$/g, "").replace(/\/+$/, "");
 
