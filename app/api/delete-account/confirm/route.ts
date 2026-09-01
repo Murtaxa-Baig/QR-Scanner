@@ -5,26 +5,28 @@ export async function POST(request: Request) {
         const body = await request.json();
         const { token, secretCode } = body || {};
 
-        if (!token || !secretCode) {
+        if (!token && !secretCode) {
             return NextResponse.json(
-                { error: "Missing required fields (token, secretCode)." },
+                { error: "Verification token or secret code is required." },
                 { status: 400 }
             );
         }
 
-        const envUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://qr-scanner-backend-production-f219.up.railway.app";
+        const envUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://qr-scanner-backend-production-32c7.up.railway.app";
         // Clean leading/trailing quotes and trailing slashes
         const cleanUrl = envUrl.trim().replace(/^['"]|['"]$/g, "").replace(/\/+$/, "");
 
         let apiUrl: string;
         if (cleanUrl.endsWith("/api/v1/users")) {
             apiUrl = `${cleanUrl}/web-delete-confirm`;
+        } else if (cleanUrl.endsWith("/api/v1")) {
+            apiUrl = `${cleanUrl}/users/web-delete-confirm`;
         } else {
             try {
                 const parsedUrl = new URL(cleanUrl);
                 apiUrl = `${parsedUrl.origin}/api/v1/users/web-delete-confirm`;
             } catch {
-                const baseUrl = cleanUrl.replace(/\/api\/v1\/web\/delete-account\/?$/, "");
+                const baseUrl = cleanUrl.replace(/\/api\/v1\/.*$/, "");
                 apiUrl = `${baseUrl}/api/v1/users/web-delete-confirm`;
             }
         }

@@ -12,19 +12,21 @@ export async function POST(request: Request) {
             );
         }
 
-        const envUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://qr-scanner-backend-production-f219.up.railway.app";
+        const envUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://qr-scanner-backend-production-32c7.up.railway.app";
         // Clean leading/trailing quotes and trailing slashes
         const cleanUrl = envUrl.trim().replace(/^['"]|['"]$/g, "").replace(/\/+$/, "");
 
         let apiUrl: string;
         if (cleanUrl.endsWith("/api/v1/users")) {
             apiUrl = `${cleanUrl}/web-delete-request`;
+        } else if (cleanUrl.endsWith("/api/v1")) {
+            apiUrl = `${cleanUrl}/users/web-delete-request`;
         } else {
             try {
                 const parsedUrl = new URL(cleanUrl);
                 apiUrl = `${parsedUrl.origin}/api/v1/users/web-delete-request`;
             } catch {
-                const baseUrl = cleanUrl.replace(/\/api\/v1\/web\/delete-account\/?$/, "");
+                const baseUrl = cleanUrl.replace(/\/api\/v1\/.*$/, "");
                 apiUrl = `${baseUrl}/api/v1/users/web-delete-request`;
             }
         }

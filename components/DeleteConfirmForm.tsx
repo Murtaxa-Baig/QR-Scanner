@@ -100,13 +100,14 @@ function DeleteConfirmFormContent() {
   };
 
   const isCodeComplete = otp.every((digit) => digit !== "");
-  const canSubmit = token && isCodeComplete && !isLoading;
+  const canSubmit = (Boolean(token.trim()) || isCodeComplete) && !isLoading;
 
   const handleConfirmDelete = async () => {
     if (!canSubmit) return;
 
     setIsLoading(true);
-    const secretCode = otp.join("");
+    const secretCode = isCodeComplete ? otp.join("") : undefined;
+    const finalToken = token.trim() || undefined;
 
     try {
       const response = await fetch(`/api/delete-account/confirm`, {
@@ -114,7 +115,10 @@ function DeleteConfirmFormContent() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ token, secretCode }),
+        body: JSON.stringify({
+          token: finalToken,
+          secretCode: secretCode,
+        }),
       });
 
       const data = await response.json();
@@ -233,7 +237,9 @@ function DeleteConfirmFormContent() {
                 {/* OTP Section */}
                 <div className="space-y-3">
                   <label className="block text-sm font-bold text-gray-900 dark:text-white text-center">
-                    Enter 6-Digit Verification Code
+                    {token && !isTokenManual
+                      ? "6-Digit Verification Code (Optional)"
+                      : "Enter 6-Digit Verification Code"}
                   </label>
 
                   <div
@@ -257,7 +263,9 @@ function DeleteConfirmFormContent() {
                     ))}
                   </div>
                   <p className="text-center text-xs text-gray-400 dark:text-gray-500">
-                    Type or paste the verification code sent to your email.
+                    {token && !isTokenManual
+                      ? "Your token is loaded. You can enter the PIN code or delete directly."
+                      : "Type or paste the 6-digit verification code sent to your email."}
                   </p>
                 </div>
 

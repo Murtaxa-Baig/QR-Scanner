@@ -68,7 +68,7 @@ export default function Footer() {
                 </li>
                 {/*  <li>
                                     <button className="hover:text-red-500 text-left">
-                                        Delete Account
+                    Delete Account
                                     </button>
                                 </li> */}
               </ul>
