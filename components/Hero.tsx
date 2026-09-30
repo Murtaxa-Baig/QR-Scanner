@@ -11,6 +11,10 @@ export default function Hero() {
         transition={{ duration: 0.8 }}
         className="w-full max-w-4xl"
       >
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold bg-primary/10 text-primary mb-6 border border-primary/20">
+          <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+          <span>QR Code Generator (project-585179173091)</span>
+        </div>
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-[#131118] dark:text-white leading-[1.1] mb-8 tracking-tight mx-auto">
           Scan, Generate, and Save with QR Code Generator
         </h1>

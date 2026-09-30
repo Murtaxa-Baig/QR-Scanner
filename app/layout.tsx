@@ -8,9 +8,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "QR Code Generator - Scan & Generate QR & Barcodes",
+  title: "QR Code Generator · Scanner & Generator by AppNaya",
   description:
-    "Easily scan, read, and generate QR codes and barcodes. Securely save your scan history and customize your profile.",
+    "QR Code Scanner & Generator by AppNaya Technologies. Easily scan, read, and generate QR codes and barcodes. Securely save your scan history and customize your profile.",
+  verification: {
+    google: "4edXJTMyV4nhq0qY_zalMGnNG0QlH5oEJP6IiO_9qlY",
+  },
 };
 
 export default function RootLayout({
@@ -21,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="google-site-verification" content="4edXJTMyV4nhq0qY_zalMGnNG0QlH5oEJP6IiO_9qlY" />
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300;400;500;600&display=swap"

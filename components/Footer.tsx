@@ -3,104 +3,75 @@ import Logo from "./Logo";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#131118] text-white py-4 border-t border-gray-800">
+    <footer className="bg-[#131118] text-white py-12 border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 border-b border-gray-800 pb-12">
           <div>
             <div className="flex items-center gap-2 mb-4">
               <Logo size={36} />
-              <span className="text-xl font-bold">
-                QR Code Generator
-              </span>
+              <div className="flex flex-col">
+                <span className="text-xl font-bold">QR Code Generator</span>
+                <span className="text-xs text-primary font-semibold">QR Code Scanner &middot; Project: project-585179173091</span>
+              </div>
             </div>
-            <p className="text-gray-400 text-sm max-w-xs">
+            <p className="text-gray-400 text-sm max-w-xs mb-3">
               Easily scan, read, and generate QR codes and barcodes.
             </p>
+            <p className="text-xs text-gray-500">
+              Support: <a href="mailto:supportappnaya@gmail.com" className="text-gray-400 hover:text-white transition-colors">supportappnaya@gmail.com</a>
+            </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-12">
-            {/* <div className="space-y-4">
-                            <h4 className="font-bold">Product</h4>
-                            <ul className="text-gray-400 space-y-2 text-sm">
-                                <li>
-                                    <Link href="#features" className="hover:text-brand-pink">
-                                        Features
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="#" className="hover:text-brand-pink">
-                                        Pricing
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="#" className="hover:text-brand-pink">
-                                        API
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div> */}
+          <div className="grid grid-cols-2 md:grid-cols-2 gap-12">
             <div className="space-y-4">
               <h4 className="font-bold">Company</h4>
               <ul className="text-gray-400 space-y-2 text-sm">
                 <li>
-                  <Link href="/contact" className="hover:text-primary">
+                  <Link href="/contact" className="hover:text-primary transition-colors">
                     Contact
                   </Link>
                 </li>
-                {/*   <li>
-                                    <Link href="#" className="hover:text-primary">
-                                        Blog
-                                    </Link>
-                                </li> */}
+                <li>
+                  <a href="mailto:honeyansari917@gmail.com" className="hover:text-primary transition-colors">
+                    Developer Contact
+                  </a>
+                </li>
               </ul>
             </div>
             <div className="space-y-4">
               <h4 className="font-bold">Legal</h4>
               <ul className="text-gray-400 space-y-2 text-sm">
                 <li>
-                  <Link href="/terms" className="hover:text-primary">
-                    Terms
+                  <Link href="/terms" className="hover:text-primary transition-colors">
+                    Terms &amp; Conditions
                   </Link>
                 </li>
                 <li>
-                  <Link href="/privacy" className="hover:text-primary">
-                    Privacy
+                  <Link href="/privacy" className="hover:text-primary transition-colors">
+                    Privacy Policy
                   </Link>
                 </li>
-                {/*  <li>
-                                    <button className="hover:text-red-500 text-left">
+                <li>
+                  <Link href="/delete-account" className="hover:text-primary transition-colors">
                     Delete Account
-                                    </button>
-                                </li> */}
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
         </div>
-        <div className="flex md:flex-row justify-center items-center pt-4 gap-4">
-          <p className="text-gray-500 text-sm ">
-            Copyright © 2024{" "}
+        <div className="flex flex-col md:flex-row justify-between items-center pt-8 gap-4">
+          <p className="text-gray-500 text-sm">
+            Copyright &copy; 2026{" "}
             <a
               href="http://www.appnayatech.com/"
               target="_blank"
               rel="noopener noreferrer"
+              className="hover:text-white transition-colors"
             >
               AppNaya Technologies
             </a>
-            . All rights reserved.
+            . All rights reserved. &middot; Google Cloud Project: <code className="text-xs text-gray-400">project-585179173091</code>
           </p>
-          {/* <div className="flex gap-6">
-                        <Link
-                            href="#"
-                            className="text-gray-500 hover:text-white transition-colors"
-                        >
-                            <span className="material-symbols-outlined">public</span>
-                        </Link>
-                        <Link
-                            href="#"
-                            className="text-gray-500 hover:text-white transition-colors"
-                        >
-                            <span className="material-symbols-outlined">alternate_email</span>
-                        </Link>
-                    </div> */}
         </div>
       </div>
     </footer>
